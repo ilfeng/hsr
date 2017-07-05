@@ -1,0 +1,17 @@
+{
+    "baseUrl": "src/js/framework/base",
+    "name": "base",
+    "out": "base.js",
+    "paths": {
+        "core": "empty:",
+        "ui": "empty:",
+        "jquery-validate-extension": "empty:",
+        "base-ns": "ns",
+        "base-application": "application",
+        "base-page-base": "pages/base",
+        "base-page-list": "pages/list",
+        "base-page-edit": "pages/edit",
+        "base-page-selector": "pages/selector",
+        "base-page-chart": "pages/chart"
+    }
+}

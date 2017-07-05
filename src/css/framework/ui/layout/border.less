@@ -1,0 +1,62 @@
+@import "../var-ui";
+
+//
+// 四边布局。
+// --------------------------------------------------
+.@{ui-prefix}layout-border {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.@{ui-prefix}layout-panel-north {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: @layout-panel-north-height;
+    width: 100%;
+    overflow: hidden;
+    border:solid 1px;
+}
+
+.@{ui-prefix}layout-panel-west {
+    position: absolute;
+    left: 0;
+    top: @layout-panel-north-height;
+    bottom: @layout-panel-south-height;
+    width: @layout-panel-west-width;
+    overflow: hidden;
+    border:solid 1px;
+}
+
+.@{ui-prefix}layout-panel-east {
+    position: absolute;
+    right: 0;
+    top: @layout-panel-north-height;
+    bottom: @layout-panel-south-height;
+    width: @layout-panel-east-width;
+    overflow: hidden;
+    border:solid 1px;
+}
+
+.@{ui-prefix}layout-panel-south {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: @layout-panel-south-height;
+    width: 100%;
+    overflow: hidden;
+    border:solid 1px;
+}
+
+.@{ui-prefix}layout-panel-center {
+    position: absolute;
+    top: @layout-panel-north-height;
+    right: @layout-panel-east-width;
+    bottom: @layout-panel-south-height;
+    left: @layout-panel-west-width;
+    overflow: hidden;
+    border:solid 1px;
+}

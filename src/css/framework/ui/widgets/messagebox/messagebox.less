@@ -1,0 +1,62 @@
+@import "../../var-ui";
+
+//
+// 消息弹出框。
+// --------------------------------------------------
+.@{ui-prefix}messagebox {
+    
+    .ui-dialog-content {
+        display: table;
+        padding: 10px;
+    }
+    
+    .msg-icon {
+        display: table-cell;
+        vertical-align: middle;
+        
+        i {
+            display: block;
+            height: 80px;
+            width: 80px;
+            margin: 8px;
+            background-repeat: no-repeat;
+            background-size: 60px 60px;
+            border-radius: 50%;
+            background-position: 9px;
+        }
+    }
+    
+    .msg-content {
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 10px;
+    }
+}
+
+.@{ui-prefix}messagebox-alert {
+    .msg-icon i {
+        background-color: #0000ff;
+        background-image: url('../img/messagebox/alert.png');
+    }
+}
+
+.@{ui-prefix}messagebox-confirm {
+    .msg-icon i {
+        background-color: #ffff00;
+        background-image:url('../img/messagebox/confirm.png');
+    }
+}
+
+.@{ui-prefix}messagebox-warn {
+    .msg-icon i {
+        background-color: #ffa500;
+        background-image: url('../img/messagebox/warn.png');
+    }
+}
+
+.@{ui-prefix}messagebox-error {
+    .msg-icon i {
+        background-color: #ff0000;
+        background-image: url('../img/messagebox/error.png');
+    }
+}

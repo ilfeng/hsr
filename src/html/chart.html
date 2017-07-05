@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="hsr" />
+    <meta name="description" content="hsr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hsr</title>
+
+    <!-- Favicon and touch icons -->
+    <link rel="icon" type="image/x-icon" href="/dist/i/favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="/dist/i/favicon.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/dist/css/lib/font-awesome-4.4.0.min.css" />
+    <link rel="stylesheet" href="/dist/css/lib/jquery.gritter-1.7.4.min.css" />
+    <link rel="stylesheet" href="/dist/css/lib/jquery.dataTables-1.10.9.min.css"/>
+    <link rel="stylesheet" href="/dist/css/lib/ui-dialog-6.0.4.css" />
+    <link rel="stylesheet" href="/dist/css/lib/jquery.contextMenu-1.6.6.css" />
+    <link rel="stylesheet" href="/dist/css/lib/zTreeStyle-3.5.css" />
+    <link rel="stylesheet" href="/dist/css/lib/jquery.fancybox-2.1.5.css" />
+    <link rel="stylesheet" href="/dist/css/framework.css" />
+    <link rel="stylesheet" href="/dist/css/lib/bootstrap-3.3.4.min.css" />
+    <link rel="stylesheet" href="/dist/css/modules/themes/default/theme.css" />
+    <link rel="stylesheet" href="/dist/css/modules/themes/default/skins/skin0101/skin.css" />
+</head>
+<body>
+<div id="loading-screen" class="hsrui-loading">
+    <div class="hsrui-loading-mask"></div>
+    <div class="hsrui-loading-container">
+        <div class="hsrui-loading-indicator">
+            <img class="hsrui-loading-image" src="../img/loading.gif" />
+            <p class="hsrui-loading-msg">
+                加载资源中,请稍候...
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="hsrui-page">
+    <div class="hsrui-page-head">
+        <div class="hsrui-breadcrumbs">
+            <ul class="hsrui-breadcrumb">
+                <li>1111</li>
+                <li>2222</li>
+            </ul>
+        </div>
+        <div class="hsrui-page-toolbar">
+            <div class="hsrui-btn-group hsrui-btn-group-lg">
+
+                <a href="#" class="hsrui-btn hsrui-btn-add" title="新增"><i class="fa fa-plus"></i>新增</a>
+                <a href="#" class="hsrui-btn hsrui-btn-delete" title="删除"><i class="fa fa-trash"></i>删除</a>
+                <a href="#" class="hsrui-btn hsrui-btn-export"><i class="fa fa-sign-out"></i>导出</a>
+                <a href="#" class="hsrui-btn hsrui-btn-import"><i class="fa fa-sign-out"></i>导入</a>
+            </div>
+        </div>
+        <div class="hsrui-page-condition">
+            <form class="hsrui-form-condition hsrui-form-flow">
+                <input type=hidden class="hsrui-order-field" name="orderField" value=""/>
+                <input type=hidden class="hsrui-order-direction" name="orderDirection" value="asc"/>
+                <input type=hidden class="hsrui-paging-page" name="start" value="1"/>
+                <input type=hidden class="hsrui-paging-size" name="limit" value="10"/>
+
+                <div class="hsrui-form-group">
+                    <label class="hsrui-form-label" for="driverName">姓名</label>
+                    <div class="hsrui-form-controls">
+                        <input type="text" class="hsrui-editor hsrui-form-control" name="driverName" placeholder="司机姓名" />
+                    </div>
+                </div>
+
+                <div class="hsrui-form-group hsrui-form-button">
+                    <div class="hsrui-form-controls">
+                        <a href="#" class="hsrui-btn hsrui-btn-lg hsrui-btn-search" title="查询"><i class="fa fa-search"></i><span>查询</span></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="hsrui-page-body">
+        <div class="hsrui-gridview"></div>
+    </div>
+</div>
+<script>
+    var PAGE_MODULE_NAME = 'base-page-chart';
+    var AUTO_RESIZE = true;
+</script>
+<script type="text/javascript">
+    function createOptions() {
+        return {
+            selectMode : hsr.ui.SelectMode.MULTIPLE,
+            searchUrl : '/dist/html/query.html'
+        };
+    }
+</script>
+<script data-main="/dist/js/main" src="/dist/js/lib/require-2.1.20.min.js"></script>
+</body>
+</html>

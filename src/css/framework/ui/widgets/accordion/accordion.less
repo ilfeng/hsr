@@ -1,0 +1,110 @@
+@import "../../var-ui";
+
+//
+// 手风琴（菜单）
+// --------------------------------------------------
+
+.@{ui-prefix}accordion {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.@{ui-prefix}accordion a {
+	display: block;
+}
+
+.@{ui-prefix}accordion-icon {
+	vertical-align: bottom;
+	margin-right: 3px;
+}
+
+//== 主菜单
+.@{ui-prefix}accordion > li {
+	transition: all .5s ease-in-out 1s;
+	-webkit-transition: all .5s ease-in-out 1s;
+}
+
+.@{ui-prefix}accordion > li > a {
+	line-height: @accordion-line-height;
+}
+
+.@{ui-prefix}accordion > li > a:hover,
+.@{ui-prefix}accordion > li > a:focus {
+}
+
+.@{ui-prefix}accordion > li.active {
+}
+
+.@{ui-prefix}accordion > li.active > a {
+}
+
+.@{ui-prefix}accordion > li.active > a:hover,
+.@{ui-prefix}accordion > li.active > a:focus {
+}
+
+/*
+.@{ui-prefix}accordion li > a > .@{ui-prefix}accordion-arrow {
+	display: inline-block;
+	background: url(@ui-icons-url) no-repeat @accordion-icon-arrow-collect-left @accordion-icon-arrow-collect-top;
+	height: @icon-height;
+	width: @icon-width;
+	vertical-align: bottom;
+}
+
+.@{ui-prefix}accordion li.active > a > .@{ui-prefix}accordion-arrow {
+background-position: @accordion-icon-arrow-expand-left @accordion-icon-arrow-expand-top;
+}
+*/
+.@{ui-prefix}accordion li > a > .@{ui-prefix}accordion-arrow {
+	font-family: @font-awesome;
+}
+
+.@{ui-prefix}accordion li > a > .@{ui-prefix}accordion-arrow::before {
+	content: @fa-caret-right;
+}
+
+.@{ui-prefix}accordion li.active > a > .@{ui-prefix}accordion-arrow::before {
+	content: @fa-caret-down;
+}
+
+.@{ui-prefix}accordion li > a:only-child > .@{ui-prefix}accordion-arrow {
+	display: none;
+}
+
+//== 子菜单
+.@{ui-prefix}accordion li > ul {
+	display: none;
+}
+
+.@{ui-prefix}accordion li.active > ul {
+	display: block;
+	overflow-y: auto;
+}
+
+.@{ui-prefix}accordion ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0 0 0 1em;
+}
+
+.@{ui-prefix}accordion ul > li {
+}
+
+.@{ui-prefix}accordion ul > li > a {
+	line-height: @accordion-line-height;
+}
+
+.@{ui-prefix}accordion ul > li > a:hover,
+.@{ui-prefix}accordion ul > li > a:focus {
+}
+
+.@{ui-prefix}accordion ul > li.active {
+}
+
+.@{ui-prefix}accordion ul > li.active > a {
+}
+
+.@{ui-prefix}accordion ul > li.active > a:hover,
+.@{ui-prefix}accordion ul > li.active > a:focus {
+}

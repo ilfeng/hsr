@@ -1,0 +1,98 @@
+@import "../../var-ui";
+
+//
+// 分割器。
+// --------------------------------------------------
+
+.@{ui-prefix}splitter {
+    position: relative;
+    
+    .@{ui-prefix}splitter-panel {
+        position: absolute;
+    }
+    
+    .@{ui-prefix}splitter-bar {
+        background-color: @bg-grey-1;
+        position: absolute;
+
+        .@{ui-prefix}splitter-handler {
+            background-color: @bg-grey-5;
+            color: @color-white;
+            display: block;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            
+            .@{ui-prefix}splitter-arrow {
+                display: block;
+                position: absolute;
+            }
+        }
+    }
+}
+
+@panel-size:    40%;
+@bar-size:      10px;
+
+//== 上下分割。
+.@{ui-prefix}splitter-vertical {
+    
+    .@{ui-prefix}splitter-panel {
+        
+        &.panel1 {
+            left: 0;
+            top: 0;
+            height: @panel-size;
+            width: 100%;
+        }
+        
+        &.panel2 {
+            width: 100%;
+        }
+    }
+    
+    .@{ui-prefix}splitter-bar {
+        left: 0;
+        top: @panel-size;
+        height: @bar-size;
+        width: 100%;
+        
+        .@{ui-prefix}splitter-arrow {
+            width: 2em;
+            left: 50%;
+        }
+    }
+}
+
+//== 左右分割。
+.@{ui-prefix}splitter-horizontal {
+    
+    .@{ui-prefix}splitter-panel {
+        
+        &.panel1 {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: @panel-size;
+        }
+        
+        &.panel2 {
+            height: 100%;
+        }
+    }
+    
+    .@{ui-prefix}splitter-bar {
+        left: @panel-size;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: @bar-size;
+        
+        .@{ui-prefix}splitter-arrow {
+            height: 2em;
+            top: 50%;
+        }
+    }
+}
+
+

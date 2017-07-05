@@ -1,0 +1,24 @@
+{
+    "baseUrl": "src/js/application",
+    "name": "main",
+    "out": "main.js",
+    "paths": {
+        "core": "empty:",
+        "ui": "empty:",
+        "base": "empty:",
+        "dataTables-utils": "empty:",
+        "gridview-utils": "empty:",
+        "ui-enum-selectMode": "empty:",
+        "echarts-utils": "empty:",
+        "echarts-utils": "empty:",
+
+        "app-ajax-settings": "settings/ajax-settings",
+        "app-application": "application",
+        "app-home-default": "home/default/shell",
+        "app-login-default": "login/default/shell"
+    },
+    "include": [
+        "app-home-default",
+        "app-login-default"
+    ]
+}

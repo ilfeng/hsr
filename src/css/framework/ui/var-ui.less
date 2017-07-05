@@ -1,0 +1,248 @@
+//
+// 变量
+// --------------------------------------------------
+@ui-images-url:                            "";
+@ui-icons-url:                             "@{ui-images-url}/icon.png";
+@ui-icons-btn-url:                         "@{ui-images-url}/button.png";
+
+//== 前缀
+@ui-prefix:                                hsrui-;
+
+//== 排版
+//
+//## 字体, 行高, 文字颜色，其它。
+@font-family-sans-serif:                   "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:                        Georgia, "Times New Roman", Times, serif;
+@font-family-china:                        SimSun, 宋体;  //"Microsoft Yahei",
+//** 为 `<code>`, `<kbd>`, `<pre>` 使用的等宽字体。
+@font-family-monospace:                    Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:                         @font-family-china;
+
+@font-size-base:                           12px;                            //  14px  12px
+@font-size-large:                          ceil((@font-size-base * 1.25));  //  18px  16px
+@font-size-small:                          ceil((@font-size-base * 0.85));  //  12px  12px
+
+@font-size-h1:                             floor((@font-size-base * 2.6));  //  36px  30px
+@font-size-h2:                             floor((@font-size-base * 2.15)); //  30px  26px
+@font-size-h3:                             ceil((@font-size-base * 1.7));   //  24px  22px
+@font-size-h4:                             ceil((@font-size-base * 1.25));  //  18px  16px
+@font-size-h5:                             @font-size-base;                 //  14px  12px
+@font-size-h6:                             ceil((@font-size-base * 0.85));  //  12px  10px
+
+//** 行高
+@line-height-base:                         17px / @font-size-base;          //  20px  16px
+//** 当使用 margin padding 时计算的行高
+@line-height-computed:                     floor((@font-size-base * @line-height-base)); // 20px  16px
+
+// Font-awesome
+@font-awesome:                             'FontAwesome';
+@fa-plus:                                  '\f067';
+@fa-minus:                                 '\f068';
+@fa-close:                                 '\f00d';
+@fa-caret-down:                            '\f0d7';
+@fa-caret-up:                              '\f0d8';
+@fa-caret-left:                            '\f0d9';
+@fa-caret-right:                           '\f0da';
+@fa-minimize:                              @fa-minus;
+@fa-maximize:                              @fa-minus;
+@fa-restore:                               @fa-minus;
+
+//== 图标
+@icon-height:                              16px;
+@icon-width:                               16px;
+
+//==
+@cursor-disabled:                          not-allowed;
+
+//== Border Backgroup
+@border-radius:                            3px;
+@border-width:                             1px;
+@border-style:                             solid;
+
+@color-white:                              #fff;
+@color-black:                              #000;
+@color-grey:                               #ccc;
+@color-grey-1:                             #eee;
+@color-grey-2:                             #ddd;
+@color-grey-3:                             #bbb;
+@color-grey-4:                             #aaa;
+@color-grey-5:                             #999;
+
+@border-white:                             @border-width @border-style @color-white;
+@border-black:                             @border-width @border-style @color-black;
+@border-grey:                              @border-width @border-style @color-grey;
+@border-grey-1:                            @border-width @border-style @color-grey-1;
+@border-grey-2:                            @border-width @border-style @color-grey-2;
+@border-grey-3:                            @border-width @border-style @color-grey-3;
+@border-grey-4:                            @border-width @border-style @color-grey-4;
+@border-grey-5:                            @border-width @border-style @color-grey-5;
+
+@bg-white:                                 @color-white;
+@bg-black:                                 @color-black;
+@bg-grey:                                  @color-grey;
+@bg-grey-1:                                @color-grey-1;
+@bg-grey-2:                                @color-grey-2;
+@bg-grey-3:                                @color-grey-3;
+@bg-grey-4:                                @color-grey-4;
+@bg-grey-5:                                @color-grey-5;
+
+@space-base:                               4px;
+@popup-zindex:                             999;
+
+//== Form
+@form-label-width:                         7em;
+@form-label-width-sm:                      5em;
+@form-label-width-l:                       12em;
+@form-label-width-xl:                      18em;
+@form-control-width:                       8em;
+@form-control-height:                      @line-height-computed + @form-control-padding-top + @form-control-padding-bottom + 2;
+@form-control-padding-x:                   5px;
+@form-control-padding-y:                   2px;
+@form-control-padding-top:                 @form-control-padding-y;
+@form-control-padding-bottom:              @form-control-padding-y;
+@form-control-padding-left:                @form-control-padding-x;
+@form-control-padding-right:               @form-control-padding-x;
+
+//== Editor
+@form-editor-height:                       @form-control-height;
+@form-editor-addon-item-width:             @line-height-computed + 2;
+@form-editor-addon-item-height:            @form-editor-height - 2;
+
+@form-prompt-error-bg-color:               #a94442;
+@form-prompt-error-border-color:           #ffffff;
+
+@form-editor-dropdown-zindex:              10000;
+
+//== Loading
+@loading-zindex:                           90000;
+@loading-bg-mark:                          rgba(0, 0, 0, .6);
+
+//== Layout
+@layout-panel-height:                      100px;
+@layout-panel-width:                       100px;
+
+@layout-panel-north-height:                50px;
+@layout-panel-south-height:                30px;
+@layout-panel-west-width:                  280px;
+@layout-panel-east-width:                  280px;
+
+//== Panel
+@panel-head-height:                        20px;
+
+//== Dropdown
+@caret-width-base:                         4px;
+@caret-width-large:                        5px;
+@menu-dropdown-zindex:                     1000;
+@menu-dropdown-bg:                         #fff;
+@menu-dropdown-border:                     rgba(0,0,0,.15);
+@menu-dropdown-fallback-border:            #ccc;
+@menu-dropdown-divider-bg:                 #e5e5e5;
+@menu-dropdown-link-color:                 #333;
+@menu-dropdown-link-hover-color:           darken(#333, 5%);
+@menu-dropdown-link-hover-bg:              #f5f5f5;
+@menu-dropdown-link-active-color:          #fff;
+@menu-dropdown-link-active-bg:             #337ab7;
+@menu-dropdown-link-disabled-color:        #777;
+@menu-dropdown-header-color:               #777;
+@menu-dropdown-caret-color:                #000;
+
+//== Accordion
+@accordion-line-height:                    @line-height-computed;
+
+@accordion-icon-arrow-height:              16px;
+@accordion-icon-arrow-width:               16px;
+@accordion-icon-arrow-expand-left:         -84px;
+@accordion-icon-arrow-expand-top:          -164px;
+@accordion-icon-arrow-collect-left:        -44px;
+@accordion-icon-arrow-collect-top:         -164px;
+
+@accordion-icon-arrow-none-left:           -4px;
+@accordion-icon-arrow-none-top:            16px;
+@accordion-icon-arrow-none-height:         16px;
+@accordion-icon-arrow-none-width:          16px;
+
+//== Tabbed
+@tabbed-border-color:                      #cccccc;
+@tabbed-background-color:                  #fff;
+@tabbed-navbar-height:                     28px;
+@tabbed-navbar-background-color:           #e2e2e2;
+@tabbed-navbar-background-image:           linear-gradient(#3b6b90, #5383a8);
+@tabbed-navbar-border-width:               1px;
+@tabbed-navbar-border-color:               @tabbed-border-color;
+@tabbed-scroll-height:                     @tabbed-navbar-height - @tabbed-spacer-height;
+@tabbed-scroll-button-width:               @font-size-base;
+@tabbed-label-height:                      @tabbed-scroll-height;
+@tabbed-label-background-color:            #92b9d8;
+@tabbed-label-background-image:            none;
+@tabbed-label-color:                       #ffffff;
+@tabbed-label-active-background-color:     @tabbed-navbar-background-color;
+@tabbed-label-active-background-image:     linear-gradient(#ffffff, #e2e2e2);
+@tabbed-label-active-color:                #000000;
+@tabbed-label-border-width:                1px;
+@tabbed-label-border-color:                @tabbed-border-color;
+@tabbed-spacer-background-color:           @tabbed-background-color;
+@tabbed-spacer-height:                     1px;
+
+@tabbed-icon-close-left:                   -64px;
+@tabbed-icon-close-top:                    -164px;
+@tabbed-icon-close-height:                 16px;
+@tabbed-icon-close-width:                  16px;
+
+//== Window
+@window-border-color:                      #cccccc;
+@window-button-height:                     16px;
+@window-navbar-height:                     28px;
+@window-navbar-background-color:           #e2e2e2;
+@window-navbar-background-image:           linear-gradient(#3b6b90, #5383a8);
+@window-navbar-border-width:               1px;
+@window-navbar-border-color:               @window-border-color;
+@window-button-width:                      33px;
+@window-content-background-color:          transparent; //@tabbed-background-color;
+@window-content-border-color:              @window-border-color;
+
+//== GridView
+@datagrid-border-width:                    1px;
+@datagrid-border-color:                    #d0d0d0;
+@datagrid-row-height:                      26px;
+
+@datagrid-head-bg-color:                   #c0c0c0;
+@datagrid-head-color:                      #ffffff;
+@datagrid-head-height:                     @datagrid-row-height;
+@datagrid-head-border-width:               1px;
+@datagrid-head-border-color:               #d0d0d0;
+@datagrid-head-padding-y:                  floor((@datagrid-head-height - @line-height-computed) /2);
+@datagrid-head-padding-x:                  10px;
+
+@datagrid-body-bg-color:                   #ffffff;
+@datagrid-body-color:                      #000000;
+@datagrid-body-height:                     @datagrid-row-height;
+@datagrid-body-border-width:               1px;
+@datagrid-body-border-color:               #c0c0c0;
+@datagrid-body-padding-y:                  floor((@datagrid-body-height - @line-height-computed) /2);
+@datagrid-body-padding-x:                  3px;
+
+@datagrid-body-odd-bg-color:               @datagrid-body-bg-color;
+@datagrid-body-odd-border-color:           @datagrid-body-border-color;
+@datagrid-body-odd-color:                  @datagrid-body-color;
+
+@datagrid-body-even-bg-color:              #e6e9ed;
+@datagrid-body-even-border-color:          @datagrid-body-border-color;
+@datagrid-body-even-color:                 @datagrid-body-color;
+
+@datagrid-body-active-bg-color:            #b0bed9;
+@datagrid-body-active-border-color:        @datagrid-body-border-color;
+@datagrid-body-active-color:               @datagrid-body-color;
+
+@datagrid-body-hover-bg-color:             #d1d9e3;
+@datagrid-body-hover-border-color:         @datagrid-body-border-color;
+@datagrid-body-hover-color:                @datagrid-body-color;
+
+//== Wells
+//
+//##
+
+@well-bg:                     #f5f5f5;
+@well-border:                 darken(@well-bg, 7%);
+@border-radius-base:        4px;
+@border-radius-large:       6px;
+@border-radius-small:       3px;

@@ -1,0 +1,60 @@
+@import "../../var-ui";
+
+//
+// 组件盒。
+// --------------------------------------------------
+.@{ui-prefix}box {
+	background: @bg-white;
+	border: @border-grey;
+	border-radius: @border-radius;
+}
+
+.@{ui-prefix}box-head,
+.@{ui-prefix}box-foot {
+    padding: @space-base;
+}
+
+.@{ui-prefix}box-head::after,
+.@{ui-prefix}box-foot::after {
+	content: '';
+	clear: both;
+}
+
+.@{ui-prefix}box-head{
+	border-bottom: @border-grey;
+}
+
+.@{ui-prefix}box-foot {
+	border-top: @border-grey;
+}
+
+.@{ui-prefix}box-body {
+  	min-height: 100px;
+    padding: @space-base;
+    position: relative;
+}
+
+.@{ui-prefix}box-head > h4,
+.@{ui-prefix}box-foot > h4,
+.@{ui-prefix}box-title {
+	display: inline-block;
+	font-size: @font-size-h4;
+	margin: @space-base @space-base * 2;
+}
+
+.@{ui-prefix}box-toolbar {
+  	float: right;
+
+    & > div {
+        display: inline-block;
+    }
+}
+
+.@{ui-prefix}box-menu {
+  
+}
+
+.@{ui-prefix}box-main {
+	height: 100%;
+	width: 100%;
+}

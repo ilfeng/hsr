@@ -1,0 +1,48 @@
+{
+  "name": "HSR",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "gulp test",
+    "devBuild": "gulp build --debug",
+    "build": "gulp build",
+    "start": "gulp webserver"
+  },
+  "repository": {
+    "type": "svn",
+    "url": "https://192.168.1.2/svn/hsr/trunck/"
+  },
+  "author": "ilfeng",
+  "license": "MIT",
+  "readme": "README.md",
+  "peerDependencies": {
+    "jquery": "^2.2.3"
+  },
+  "devDependencies": {
+    "deeply": "^0.1.0",
+    "fs": "0.0.2",
+    "gulp": "^3.9.1",
+    "gulp-changed": "^3.1.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^3.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-jshint": "^2.0.4",
+    "gulp-less": "^3.3.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-param": "^1.0.3",
+    "gulp-qunit": "^1.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace-task": "^0.11.0",
+    "gulp-requirejs": "^1.0.0-rc2",
+    "gulp-requirejs-optimize": "^1.2.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.8",
+    "gulp-webserver": "0.9.1",
+    "jquery": "^2.1.4",
+    "jshint": "^2.9.5",
+    "path": "^0.11.14"
+  }
+}

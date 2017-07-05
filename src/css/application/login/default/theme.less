@@ -1,0 +1,140 @@
+@import "../../mixins/prefixer";
+@ui-prefix:                                hsrui-;
+
+.@{ui-prefix}loading-mask {
+  background: #ffffff;
+  opacity: .90;
+}
+
+@text-decoration-none: none;
+@color-fff: rgba(255, 255, 255, 1);
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.@{ui-prefix}text-cen {
+  .text-cen();
+}
+
+.@{ui-prefix}page {
+  height: 100%;
+  background: url(/dist/img/login/body.jpg) no-repeat center top fixed;
+  font-size: 14px;
+  a {
+    text-decoration: @text-decoration-none;
+    &hover{
+      text-decoration: underline;
+    }
+  }
+
+}
+
+.@{ui-prefix}top-login-top {
+  padding-top: 120px;
+  .@{ui-prefix}top-login {
+    background: #fff none repeat scroll 0 0;
+    display: block;
+    height: 130px;
+    margin: 0 auto 4em;
+    position: relative;
+    transform: rotate(45deg) translate3d(0px, 0px, 0px);
+    width: 130px;
+    span {
+      border: 2px solid #f36;
+      display: block;
+      height: 105px;
+      left: 11px;
+      margin: 0 auto;
+      position: absolute;
+      top: 11px;
+      width: 105px;
+      img {
+        margin: 20px 0 0 20px;
+        transform: rotate(-45deg) translate3d(0px, 0px, 0px);
+      }
+    }
+  }
+}
+
+.@{ui-prefix}login-title {
+  .text-cen();
+  color: #FFF;
+  text-shadow: 3px 3px 5px #999
+}
+
+.@{ui-prefix}login {
+  .@{ui-prefix}main {
+    padding-top: 50px;
+    width: 600px;
+    margin: 0px auto;
+    i {
+      display: inline-block;
+      float: left;
+      height: 50px;
+      width: 80px;
+      overflow: hidden
+    }
+    .@{ui-prefix}name, .@{ui-prefix}possword, .@{ui-prefix}verification {
+      border: 1px solid #74675b;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.32) none repeat scroll 0 0;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+      height: 50px;
+      margin-bottom: 1.5em;
+      overflow: hidden;
+      .@{ui-prefix}input-text {
+        float: left;
+        width: 518px;
+        height:50px;
+        padding:0 8px;
+        display: inline-block;
+        border: none;
+        font-size: 14px;
+      }
+    }
+    .@{ui-prefix}name i {
+      background: url(/dist/img/login/m.png) no-repeat center center;
+    }
+    .@{ui-prefix}possword i {
+      background: url(/dist/img/login/l.png) no-repeat center center;
+    }
+    .@{ui-prefix}verification i {
+      width: 150px;
+      text-align: center;
+      line-height: 50px;
+    }
+    .@{ui-prefix}verification .@{ui-prefix}input-text {
+      width: 448px;
+    }
+  }
+  .@{ui-prefix}btn {
+    @color: #ff3366;
+    @height: 50px;
+    background-color: @color;
+    border: 2px solid #ff3366;
+    color: @color-fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.2em;
+    outline: medium none;
+    text-transform: uppercase;
+    width: 100%;
+    height: @height;
+    .rounded-corners();
+    &:hover { // 有 & 时解析的是同一个元素或此元素的伪类，没有 & 解析是后代元素
+      transition: all 0.3s ease 0s;
+      border-bottom: 2px solid rgba(255, 255, 255, .5);
+    }
+  }
+}
+
+.@{ui-prefix}copy {
+  color: #FFF;
+  .text-cen();
+  padding-top: 50px;
+  position: absolute;
+  bottom: 50px;
+  width: 100%
+}
+

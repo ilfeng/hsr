@@ -1,0 +1,30 @@
+@import "../../var-ui";
+
+//
+// 按钮控件（按钮组）。
+// --------------------------------------------------
+.@{ui-prefix}btn-group {
+	display: block;
+	font-size: 0;
+	word-spacing: -.5em;
+}
+
+.@{ui-prefix}btn-group > .@{ui-prefix}btn,
+.@{ui-prefix}btn-group > .@{ui-prefix}separator {
+	display: inline-block;
+	font-size: @font-size-base;
+    margin: @space-base;
+	word-spacing: 0;
+}
+
+.@{ui-prefix}btn-group .@{ui-prefix}separator {
+	border-right: 1px solid #000;
+	height: @line-height-computed;
+	margin: 4px 6px;
+	vertical-align: top;
+	width: 1px;
+}
+
+.@{ui-prefix}btn-group > .@{ui-prefix}separator::after {
+	content: " ";
+}

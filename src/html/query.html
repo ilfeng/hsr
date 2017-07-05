@@ -1,0 +1,58 @@
+<table border="0" cellpadding="0" cellspacing="0" class="hsrui-datagrid hsrui-datagrid-bordered hsrui-datagrid-striped hsrui-datagrid-hover">
+    <thead>
+        <tr>
+            <th class="hsrui-column"><input type="checkbox" class="indicator" /></th>
+            <th class="hsrui-column">序号</th>
+            <th class="hsrui-column" data-dt-orderable="false">照片</th>
+            <th class="hsrui-column">姓名</th>
+            <th class="hsrui-column" data-field="driver_no" data-orderable="true">司机代码</th>
+            <th class="hsrui-column">操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr data-id="1">
+            <td><input type="checkbox" class="indicator" /></td>
+            <td  title="1">1</td>
+            <td>11</td>
+            <td>111</td>
+            <td>1111</td>
+            <td>
+                <div class="hsrui-btn-group">
+                    <a href="#" class="hsrui-btn hsrui-btn-modify"  title="编辑"><i class="fa fa-pencil"></i></a>
+                    <a href="#" class="hsrui-btn hsrui-btn-delete" title="删除"><i class="fa fa-trash"></i></a>
+                </div>
+            </td>
+    </tr>
+    </tbody>
+    <tfoot>
+    </tfoot>
+</table>
+
+<div class="hsrui-paging">
+    <div class="hsrui-paging-info">
+        <div class="hsrui-paging-length">
+            <span>共<b class="hsrui-paging-totalsize">total</b>条记录</span>
+        </div>
+    </div>
+
+    <div class="hsrui-paging-index">
+        <form>
+            <a href="#" class="hsrui-paging-button first" data-page="1">首页</a>
+            <a href="#" class="hsrui-paging-button previous" title="前一页" data-page="x-1">前一页</a>
+            <span>首页</span>
+            <span>上一页</span>
+
+            <span><b class="hsrui-paging-pageindex">x</b>/<b class="hsrui-paging-pagecount">size</b></span>
+
+            <a href="#" class="hsrui-paging-button next" title="后一页" data-page="x+1">后一页</a>
+            <a href="#" class="hsrui-paging-button last" data-page="${pageCount}">尾页</a>
+            <span>后一页</span>
+            <span>尾页</span>
+
+            <span>到</span>
+            <input name="start" type="text" class="hsrui-form-control hsrui-text-pageindex">
+            <span>页</span>
+            <input type="button" value="确定" class="hsrui-paging-button hsrui-btn-changepage">
+        </form>
+    </div>
+</div>

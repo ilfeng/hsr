@@ -1,0 +1,24 @@
+{
+    "baseUrl": "src/js/framework/core",
+    "name": "core",
+    "out": "core.js",
+    "paths": {
+        "ns": "ns",
+        "event-object": "base/event-object",
+        "dictionary": "collection/dictionary",
+        "logging-level": "logging/level",
+        "logging-logger": "logging/logger",
+        "tool-comparer": "tool/comparer",
+        "tool-inherit": "tool/inherit",
+        "tool-namespace": "tool/namespace",
+        "util-array": "utils/array",
+        "util-boolean": "utils/boolean",
+        "util-date": "utils/date",
+        "util-dateformat": "utils/dateformat",
+        "util-enum": "utils/enum",
+        "util-string": "utils/string",
+        "util-url": "utils/url",
+        "util-uuid": "utils/uuid",
+        "util-websocket": "utils/websocket"
+    }
+}

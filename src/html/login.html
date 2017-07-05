@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="hsr" />
+    <meta name="description" content="hsr" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hsr</title>
+    <!-- Favicon and touch icons -->
+    <link rel="icon" type="image/x-icon" href="/dist/i/favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="/dist/i/favicon.png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/dist/css/framework.css" />
+    <link rel="stylesheet" href="/dist/css/lib/bootstrap-3.3.4.min.css" />
+    <link rel="stylesheet" href="/dist/css/login/themes/default/theme.css" />
+    <link rel="stylesheet" href="/dist/css/login/themes/default/skins/skin0101/skin.css" />
+</head>
+<body>
+<div id="loading-screen" class="hsrui-loading">
+    <div class="hsrui-loading-mask"></div>
+    <div class="hsrui-loading-container">
+        <div class="hsrui-loading-indicator">
+            <img class="hsrui-loading-image" src="/dist/img/loading.gif" />
+        </div>
+    </div>
+</div>
+<div id="browse-danger"  class="hsrui-browse-danger" style="display:none;">
+    <div id="browse-danger-content" class="hsrui-browse-danger-content alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="hsrui-bd-image">
+            <img src="/dist/img/bowser-waring.png" />
+        </div>
+        <div class="hsrui-bd-content">
+            <h4>您的浏览器可能存在兼容问题，请使用推荐的浏览器，否则将无法使用全部功能。</h4>
+            <div>
+                <div>
+                    建议您使用：
+                </div>
+                <div>
+                    谷歌浏览器(Chrome)&nbsp;&gt;&gt;&nbsp;&nbsp;<a href="http://www.google.cn/chrome/browser/desktop/index.html">下载</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="hsrui-page">
+    <div class="hsrui-top-login-top">
+        <div class="hsrui-top-login">
+            <span><img src="/dist/img/login/group.png" alt=""></span>
+        </div>
+    </div>
+    <h1 class="hsrui-login-title">呼撒网管理后台</h1>
+    <div class="hsrui-login">
+        <div class="hsrui-main">
+            <form>
+                <div class="hsrui-name">
+                    <i></i>
+                    <input class="hsrui-input-text" placeholder="请输入您的用户名" type="text">
+                </div>
+                <div class="hsrui-possword">
+                    <i></i>
+                    <input class="hsrui-input-text" placeholder="请输入您的密码" type="text">
+                </div>
+                <div class="hsrui-verification">
+                    <input class="hsrui-input-text" placeholder="请输入验证码" type="text">
+                    <i>
+                        验证码
+                    </i>
+                </div>
+                <button type="submit" class="hsrui-btn">立即登录</button>
+            </form>
+        </div>
+    </div>
+    <div class="hsrui-copy">
+        版权所有：大投创科    2016-2023
+    </div>
+</div>
+<!-- Javascript -->
+<script src="/dist/js/lib/jquery-1.11.2.min.js"></script>
+<script src="/dist/js/lib/modernizr-2.8.3.min.js"></script>
+<script>
+    if (!Modernizr.canvas || !Modernizr.websockets) {
+        $('#browse-danger').show();
+    }
+    var PAGE_MODULE_NAME = 'app-login-default';
+    var AUTO_RESIZE = true;
+</script>
+<script data-main="/dist/js/main" src="/dist/js/lib/require-2.1.20.min.js"></script>
+</body>
+</html>

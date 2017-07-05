@@ -1,0 +1,33 @@
+@import "../../var-ui";
+
+//
+// 列表视图。
+// --------------------------------------------------
+.@{ui-prefix}listview {
+    display: block;
+    overflow-x: auto;
+    position: relative;
+    word-spacing: -.5em;
+    
+    .@{ui-prefix}listview-body {
+        display: table;
+    }
+}
+
+.@{ui-prefix}listview .@{ui-prefix}listview-group {
+    display: table-cell;
+    position: relative;
+    padding-left: 20px;
+    word-spacing: 0;
+    
+    &:last-child {
+        padding-right: 20px;
+    }
+
+    h4, .@{ui-prefix}listgroup-title {
+        display: block;
+        font-size: 18px;
+        padding: 11px 10px;
+    }
+
+}

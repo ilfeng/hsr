@@ -1,0 +1,57 @@
+
+.hsrui-page-selector {
+    
+    .hsrui-page-body {
+        padding: 10px;
+    }
+    
+    .hsrui-page-selected {
+        border: 1px solid #ccc;
+        border-radius: 4px 4px 0 0;
+        height: 90px;
+        margin-bottom: 4px;
+        overflow-y: auto;
+        
+        .selected-item {
+            cursor: pointer;
+            display: inline-block; 
+            min-width:200px; 
+            margin: 2px; 
+            padding: 6px; 
+            border: 1px solid #aeb2b3;
+            
+            .fa {
+                float: right;
+            }
+            
+            &:after {
+                content: '';
+                clear: both;
+            }
+        }
+    }
+    
+    .hsrui-container {
+        border: 1px solid #ccc;
+        border-radius: 0 0 4px 4px;
+        height: 360px;
+        overflow-y: auto;
+    }
+    
+    .selector-wrapper {
+        .selector-item {
+            cursor: pointer;
+            display: inline-block; 
+            min-width:200px; 
+            margin: 2px; 
+            padding: 6px; 
+            border: 1px solid #aeb2b3;
+            
+            &.selected {
+                padding: 5px;  
+                border-width: 2px; 
+                border-color: #1fb531;
+            }
+        }
+    }
+}

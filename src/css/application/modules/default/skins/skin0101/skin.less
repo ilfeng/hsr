@@ -1,0 +1,175 @@
+//== 前缀
+@ui-prefix:                                hsrui-;
+
+@page-border-color:                        #22ad33;
+
+@btn-border-color:                         #cccccc;
+@btn-bg-color:                             #00b641;
+@btn-focus-bg-color:                       #4dde63;
+
+@input-border-color:                       #9bd5a5;
+@input-border-color-rgb1:                  rgba(155,213,165,.075);
+@input-border-color-rgb2:                  rgba(155,213,165,.6);
+
+
+/* page */
+
+.hsrui-page-body {
+    border-top-color: @page-border-color;
+}
+
+/* button */
+
+.hsrui-btn-lg,
+.hsrui-btn-group-lg .hsrui-btn {
+    border-color: @btn-border-color;
+    background: @btn-bg-color;
+    color: #fff;
+    
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: @btn-focus-bg-color;
+        color: #fff;
+        outline-color: @btn-bg-color;
+    }
+}
+
+/* breadcrumbs */
+
+
+/* toolbar */
+
+.hsrui-page-toolbar {
+    border-bottom-color: @page-border-color;
+}
+
+/* form */
+
+.Wdate {
+    border-color: @input-border-color !important;
+}
+
+.hsrui-form-control {
+    border-color: @input-border-color;
+    
+    &:focus {
+        border-color: @input-border-color;
+        box-shadow: inset 0 1px 1px @input-border-color-rgb1, 0 0 8px @input-border-color-rgb2;
+    }
+}
+
+/* tabbed */
+
+.hsrui-page-list > .hsrui-page-head > .hsrui-tabbed-left {
+    
+    .hsrui-tabbed-label, 
+    .hsrui-tabbed-nav > li {
+        background: #ebebeb;
+        
+        & > a {
+            color: #000;
+        }
+    }
+    
+    .hsrui-tabbed-label.active, 
+    .hsrui-tabbed-nav > li.active {
+        background: @btn-focus-bg-color;
+        
+        & > a {
+            color: #fff;
+        }
+    }
+    
+}
+
+/* command */
+
+/* condition */
+
+
+/* gridview */
+
+@datagrid-head-bg-color:                           #ebebeb;
+@datagrid-head-color:                              #000;
+@datagrid-body-bg-color:                           #fff;
+@datagrid-body-color:                              #000;
+@datagrid-body-odd-bg-color:                       #fff;
+@datagrid-body-odd-border-color:                   #d0d0d0;
+@datagrid-body-even-bg-color:                      #ebf1f1;
+@datagrid-body-even-border-color:                  #d0d0d0;
+@datagrid-body-active-bg-color:                    #31ae46;
+@datagrid-body-active-color:                       #fff;
+@datagrid-body-active-border-color:                #d0d0d0;
+@datagrid-body-hover-bg-color:                     #a8d4b3;
+@datagrid-body-hover-border-color:                 #d0d0d0;
+@datagrid-body-hover-color:                        #fff;
+
+.hsrui-datagrid-striped thead tr {
+    background-color: @datagrid-head-bg-color;
+    color: @datagrid-head-color;
+}
+
+.hsrui-datagrid-striped tbody tr {
+    background-color: @datagrid-body-bg-color;
+    color: @datagrid-body-color;
+}
+
+.hsrui-datagrid-striped tbody tr:nth-child(odd) {
+    background-color: @datagrid-body-odd-bg-color;
+    
+    td {
+        border-color: @datagrid-body-odd-border-color;
+    }
+}
+
+.hsrui-datagrid-striped tbody tr:nth-child(even) {
+    background-color: @datagrid-body-even-bg-color;
+    
+    td {
+        border-color: @datagrid-body-even-border-color;
+    }
+}
+
+.hsrui-datagrid-striped tbody tr.selected {
+    background-color: @datagrid-body-active-bg-color !important;
+    color: @datagrid-body-active-color;
+    
+    td {
+        border-color: @datagrid-body-active-border-color;
+    }
+    
+    a {
+        color: @datagrid-body-active-color;
+    }
+}
+
+//== 滑动颜色
+.hsrui-datagrid-hover tbody tr:hover,
+.hsrui-datagrid-hover tbody tr:nth-child(even):hover,
+.hsrui-datagrid-hover tbody tr:nth-child(odd):hover {
+    background-color: @datagrid-body-hover-bg-color;
+    color: @datagrid-body-hover-color;
+    
+    td {
+        border-color: @datagrid-body-hover-border-color;
+    }
+    
+    a {
+        color: @datagrid-body-hover-color;
+    }
+}
+
+/* selector */
+
+.hsrui-page-selector {
+    .hsrui-page-selected {
+        border-color: @page-border-color;
+    }
+    
+    .selector-wrapper {
+        &.selected {
+            border-color: @page-border-color;
+        }
+    }
+}

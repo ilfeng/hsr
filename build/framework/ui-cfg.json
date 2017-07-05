@@ -1,0 +1,100 @@
+{
+    "baseUrl": "src/js/framework/ui",
+    "name": "ui",
+    "out": "ui.js",
+    "paths": {
+        "extension": "empty:",
+        "core": "empty:",
+
+        "ui-ns": "ns",
+        "ui-tool-cache": "tool/cache",
+        "ui-tool-manager": "tool/manager",
+        "ui-tool-options": "tool/options",
+        "ui-tool-api": "tool/api",
+        
+        "ui-enum-selectMode": "enums/select-mode",
+        "ui-enum-dialogResult": "enums/dialog-result",
+        
+        "ui-control": "base/control",
+        "ui-container": "base/container",
+        "ui-panel": "base/panel",
+        "ui-dropdown-panel": "base/dropdown-panel",
+        
+        "ui-editor": "editors/editor",
+        "ui-editor-dropdown": "editors/dropdown/dropdown-editor",
+        "ui-editor-combo": "editors/combo/combo-editor",
+        "ui-editor-autocomplate": "editors/combo/autocomplete-editor",
+        "ui-editor-lookup": "editors/lookup/lookup-editor",
+        "ui-editor-lookup-tree": "editors/lookup/tree-lookup-editor",
+        "ui-editor-picker": "editors/picker/picker-editor",
+        "ui-editor-date": "editors/picker/date-picker-editor",
+        "ui-editor-color": "editors/picker/color-picker-editor",
+        "ui-editor-popup": "editors/popup/popup-editor",
+        "ui-editor-image-uploader": "editors/uploader/uploader-image-editor",
+        "ui-editor-file-uploader": "editors/uploader/uploader-file-editor",
+        "ui-editor-select": "editors/select/select",
+        
+        "ui-accordion": "widgets/accordion/accordion",
+        
+        "ui-box": "widgets/box/box",
+        "ui-box-chart": "widgets/box-extension/box-chart",
+        "ui-box-remind": "widgets/box-extension/box-remind",
+        
+        "ui-breadcrumb-tree": "widgets/breadcrumb/tree",
+        
+        "calendar-utils": "widgets/calendar/calendar-utils",
+        "ui-calendar": "widgets/calendar/calendar",
+        "ui-calendar-lunar": "widgets/calendar/calendar-lunar",
+        
+        "ui-clock-text": "widgets/clock/text",
+        
+        "ui-dialog": "widgets/dialog/dialog-art",
+        
+        "chart-magnifier": "widgets/chart/magnifier",
+        "echarts-utils": "widgets/chart/echarts-utils",
+        "ui-chart": "widgets/chart/chart-echarts",
+        
+        "ui-favorite": "widgets/favorite/favorite",
+        
+        "dataTables-utils": "widgets/gridview/dataTables-utils",
+        "gridview-utils": "widgets/gridview/gridview-utils",
+        "ui-gridview": "widgets/gridview/gridview-dataTables-html",
+        "rowmerge-utils": "widgets/gridview/rowmerge-utils",
+        
+        "ui-fancybox": "widgets/lightbox/fancybox",
+        
+        "ui-listview": "widgets/listview/listview",
+        
+        "ui-loading": "widgets/loading/loading",
+
+        "ui-browse-danger": "widgets/browse-danger/browse-danger",
+        
+        "ui-marguee": "widgets/marguee/marguee",
+        
+        "ui-menu-dropdown": "widgets/menu/dropdown",
+        
+        "ui-messagebox": "widgets/messagebox/messagebox",
+        
+        "ui-paging": "widgets/paging/paging",
+        
+        "ui-splitter": "widgets/splitter/splitter",
+        
+        "tabbed-bar": "widgets/tabbed/inner/bar",
+        "tabbed-bar-scroll": "widgets/tabbed/inner/bar-scroll",
+        "tabbed-label": "widgets/tabbed/inner/label",
+        "tabbed-content": "widgets/tabbed/inner/content",
+        "tabbed-panel": "widgets/tabbed/inner/panel",
+        "ui-tabbed-adv": "widgets/tabbed/advanced",
+        "ui-tabbed": "widgets/tabbed/simple",
+        
+        "ui-tree": "widgets/tree/simple",
+        
+        "ui-box-video": "widgets/video/box",
+        "ui-view-video": "widgets/video/view",
+        
+        "ui-window": "widgets/window/window"
+    },
+    "include": [
+        
+    ]
+}

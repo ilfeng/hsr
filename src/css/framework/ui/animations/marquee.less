@@ -1,0 +1,34 @@
+@import "../var-ui";
+@import "../../mixins/prefixer";
+
+//
+// 滚动
+// --------------------------------------------------
+.@{ui-prefix}animation-marquee {
+  .animation(marquee 20s infinite);
+}
+
+.@{ui-prefix}animation-marquee:hover {
+  .animation-play-state(paused);
+}
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -1600px;
+  }
+}
+
+@-webkit-keyframes marquee {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -1600px;
+  }
+}
+

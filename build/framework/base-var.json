@@ -1,0 +1,6 @@
+{
+    "patterns": [{
+        "match": "@VERSION@",
+        "replacement": "1.0.0"
+    }]
+}

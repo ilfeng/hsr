@@ -1,0 +1,14 @@
+{"status":"000000","msg":"success","data":[
+  {
+    "value": "jquery",
+    "label": "jQuery"
+  },
+  {
+    "value": "jquery-ui",
+    "label": "jQuery UI"
+  },
+  {
+    "value": "sizzlejs",
+    "label": "Sizzle JS"
+  }
+]}

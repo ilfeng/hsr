@@ -1,0 +1,35 @@
+
+
+//
+// 图表放大器。
+// --------------------------------------------------
+.@{ui-prefix}magnifier {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: @popup-zindex;
+}
+
+.@{ui-prefix}magnifier-mask {
+	background: @loading-bg-mark;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+.@{ui-prefix}magnifier-container {
+	background: @bg-white;
+    border: @border-grey;
+    border-radius: @space-base * 4;
+    height: 90%;
+    width: 90%;
+    top: 5%;
+    margin: 0 auto;
+    padding: @space-base * 4;
+    position: relative;
+}
+
+.@{ui-prefix}magnifier-chart {
+    height: 100%;
+    width: 100%;
+}

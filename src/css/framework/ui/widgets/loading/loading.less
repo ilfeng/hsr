@@ -1,0 +1,55 @@
+@import "../../var-ui";
+
+//
+// 加载控件。
+// --------------------------------------------------
+
+.@{ui-prefix}loading {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: @loading-zindex;
+}
+
+.@{ui-prefix}loading-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: @loading-bg-mark;
+    z-index: @loading-zindex + 1;
+}
+
+.@{ui-prefix}loading-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 240px;
+    height: 240px;
+    margin: -120px 0px 0px -120px;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    z-index: @loading-zindex + 2;
+}
+
+.@{ui-prefix}loading-msg {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+
+.@{ui-prefix}loading .@{ui-prefix}spinner {
+    width: 60px;
+    height: 60px;
+}
+
+.@{ui-prefix}loading .@{ui-prefix}spinner-container1 > div,
+.@{ui-prefix}loading .@{ui-prefix}spinner-container2 > div,
+.@{ui-prefix}loading .@{ui-prefix}spinner-container3 > div {
+    width: 12px;
+    height: 12px;
+    background-color: blue;
+}

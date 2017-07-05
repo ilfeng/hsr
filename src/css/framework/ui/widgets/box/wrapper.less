@@ -1,0 +1,21 @@
+@import "../../var-ui";
+
+//
+// 组件盒容器控件。
+// --------------------------------------------------
+.@{ui-prefix}box-wrapper {
+	height: 100%;
+	width: 100%;
+}
+
+.@{ui-prefix}box-wrapper::after {
+	content: '';
+	clear: both;
+}
+
+.@{ui-prefix}box-wrapper .@{ui-prefix}box {
+	display: inline-block;
+	height: 400px;
+	width: 400px;
+    margin: @space-base * 2;
+}

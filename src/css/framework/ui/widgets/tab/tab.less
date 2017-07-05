@@ -1,0 +1,169 @@
+@import "../../var-ui";
+
+//
+// 卡片控件。
+// --------------------------------------------------
+
+.@{ui-prefix}tabbed {
+    position: relative;
+}
+
+//== 滚动
+.@{ui-prefix}tabbed-scrollbar {
+    display: table;
+    word-spacing: -.5em;
+}
+
+// 滚动按钮
+.@{ui-prefix}tabbed-scroll-button {
+    display: inline-block;
+    height: @tabbed-navbar-height - @tabbed-spacer-height;
+    width: @tabbed-scroll-button-width;
+    font-family: @font-awesome;
+    text-align: center;
+    line-height: @tabbed-navbar-height;
+    cursor: pointer;
+    vertical-align: top;
+    color: @color-white;
+}
+
+.@{ui-prefix}tabbed-scroll-button.left::before {
+  content: @fa-caret-left;
+}
+
+.@{ui-prefix}tabbed-scroll-button.right::before {
+    content: @fa-caret-right;
+}
+
+.@{ui-prefix}tabbed-scroll-button.none {
+    display: none;
+}
+
+.@{ui-prefix}tabbed-scroll-button.disable {
+    cursor: not-allowed;
+}
+
+.@{ui-prefix}tabbed-scroll-button:hover {
+}
+
+// 滚动视窗
+.@{ui-prefix}tabbed-scroll-sight {
+    display: inline-block;
+    overflow: hidden;
+    font-size: @font-size-base;
+    vertical-align: bottom;
+    border-radius: @border-radius @border-radius 0 0;
+    margin-bottom: -1 * @tabbed-navbar-border-width;
+    height: @tabbed-scroll-height;
+}
+
+// 标签集合
+.@{ui-prefix}tabbed-nav {
+    display: inline-table;
+    list-style: none;
+    width: 100%;
+    word-spacing: -.5em;
+}
+
+.@{ui-prefix}tabbed-scroll-sight > .@{ui-prefix}tabbed-nav {
+    width: 5000px;
+}
+
+  // 标签
+.@{ui-prefix}tabbed-nav > li,
+.@{ui-prefix}tabbed-label {
+    display: inline-block;
+    background: @tabbed-label-background-color @tabbed-label-background-image;
+    border: @tabbed-label-border-width solid @tabbed-label-border-color;
+    border-bottom: 0;
+    word-spacing: 0;
+}
+
+.@{ui-prefix}tabbed-nav > li.active,
+.@{ui-prefix}tabbed-label.active {
+    background: @tabbed-label-active-background-image;
+    border-color: @tabbed-label-active-background-color;
+    margin-bottom: -1 * @tabbed-navbar-border-width;
+}
+
+@label-link-padding-x: floor(@font-size-base / 2);
+@label-link-padding-y: floor((@tabbed-label-height - @line-height-computed) / 2);
+@label-link-padding-t: floor(@label-link-padding-y);
+@label-link-padding-b: @label-link-padding-t;
+@label-link-padding-l: floor(@label-link-padding-x);
+@label-link-padding-r: @font-size-base - @label-link-padding-x;
+
+.@{ui-prefix}tabbed-nav > li > a,
+.@{ui-prefix}tabbed-label > a {
+    display: block;
+    color: @tabbed-label-color;
+    line-height: @line-height-computed;
+    padding: @label-link-padding-t @label-link-padding-r @label-link-padding-b @label-link-padding-l;
+}
+
+.@{ui-prefix}tabbed-nav > li > a > .icon,
+.@{ui-prefix}tabbed-label > a > .icon {
+    margin-right: -3px;
+    vertical-align: bottom;
+}
+
+.@{ui-prefix}tabbed-nav > li > a > span,
+.@{ui-prefix}tabbed-label > a > span {
+    display: inline-block;
+    margin: 0 8px 0 3px;
+    line-height: @line-height-computed;
+}
+
+.@{ui-prefix}tabbed-nav > li > a > .close,
+.@{ui-prefix}tabbed-label > a > .close {
+    font-family: @font-awesome;
+    color: @color-white;
+}
+
+.@{ui-prefix}tabbed-nav > li > a > .close::before,
+.@{ui-prefix}tabbed-label > a > .close::before {
+    content: @fa-close;
+}
+
+.@{ui-prefix}tabbed-nav > li.active > a,
+.@{ui-prefix}tabbed-label.active > a {
+    color: @tabbed-label-active-color;
+    font-weight: bold;
+}
+
+.@{ui-prefix}tabbed-nav > li > a > .close,
+.@{ui-prefix}tabbed-label.active > a > .close {
+    color: @color-black;
+}
+
+.@{ui-prefix}tabbed-nav > li > a > .close:hover,
+.@{ui-prefix}tabbed-nav > li.active > a > .close:hover,
+.@{ui-prefix}tabbed-label > a > .close:hover,
+.@{ui-prefix}tabbed-label.active > a > .close:hover {
+    color: red;
+}
+
+//== （标签与内容之间的）间隔
+
+.@{ui-prefix}tabbed-spacer {
+    background-color: @tabbed-spacer-background-color;
+    height: @tabbed-spacer-height;
+    position: relative;
+}
+
+//== 内容。
+.@{ui-prefix}tabbed-content {
+    background: @color-white;
+    width: 100%;
+}
+
+// 内容面板
+.@{ui-prefix}tabbed-panel {
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+.@{ui-prefix}tabbed-panel.active {
+    display: block;
+}

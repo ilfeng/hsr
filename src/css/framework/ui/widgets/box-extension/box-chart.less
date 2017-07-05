@@ -1,0 +1,36 @@
+@import "../../var-ui";
+
+//
+// 图表组件盒。
+// --------------------------------------------------
+.@{ui-prefix}box-chart {
+
+}
+
+.@{ui-prefix}box-head {
+    border-bottom: @border-grey;
+    padding: @space-base;
+}
+
+.@{ui-prefix}box-chart-head::after {
+	content: '';
+	clear: both;
+}
+
+.@{ui-prefix}box-chart-body {
+    padding: @space-base;
+    position: relative;
+}
+
+//== 条件
+.@{ui-prefix}box-condition {
+    background: @bg-white;
+    border: @border-grey;
+	border-radius: @border-radius;
+    margin: 0 auto;
+    padding: @space-base;
+    position: absolute;
+    width: 50%;
+    z-index: 1;
+}
+

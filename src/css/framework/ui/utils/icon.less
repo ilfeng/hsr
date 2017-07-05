@@ -1,0 +1,34 @@
+@import "../var-ui";
+
+//
+// 图标。
+// --------------------------------------------------
+
+.@{ui-prefix}icon {
+  .icon();
+}
+
+
+.@{ui-prefix}icon-btn {
+  background: url("@{ui-icons-btn-url}") no-repeat;
+  .icon();
+}
+
+//== 生成方法
+.generate-icons(@g, @width, @height, @spacing, @top, @columnCount, @n, @i: 1) when (@i =< @n) {
+  @rowIndex : ceil(@i / @columnCount);
+  @columnIndex : mod(@i, @columnCount);
+  @indexTop: @top + (@rowIndex - 1) * (@spacing + @height);
+  @indexLeft: @spacing * @columnIndex + (@columnIndex - 1) * @width;
+
+  .@{ui-prefix}icon-b@{g}r@{rowIndex}c@{columnIndex} {
+    background-position: -@indexLeft -@indexTop;
+    height: @height;
+    width: @width;
+  }
+
+  .generate-icons(@g, @width, @height, @spacing, @top, @columnCount, @n, (@i + 1));
+}
+
+//== 通用
+.generate-icons(1, 35px, 16px, 4px, 6px, 10, 8);

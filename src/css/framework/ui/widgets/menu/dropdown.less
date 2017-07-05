@@ -1,0 +1,151 @@
+@import "../../var-ui";
+
+//
+// 菜单。
+// --------------------------------------------------
+
+
+//== 下拉箭头。
+.@{ui-prefix}caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top:   @caret-width-base dashed;
+    border-right: @caret-width-base solid transparent;
+    border-left:  @caret-width-base solid transparent;
+}
+
+//== 下拉菜单容器 (div)
+.@{ui-prefix}dropup,
+.@{ui-prefix}dropdown {
+    position: relative;
+}
+
+.@{ui-prefix}dropdown-toggle {
+    display: block;
+}
+
+//== 下拉菜单 (ul)
+.@{ui-prefix}dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: @menu-dropdown-zindex;
+  display: none; // none by default, but block on "open" of the menu
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0; // override default ul
+  list-style: none;
+  font-size: @font-size-base;
+  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  background-color: @menu-dropdown-bg;
+  border: 1px solid @menu-dropdown-fallback-border; // IE8 fallback
+  border: 1px solid @menu-dropdown-border;
+  border-radius: @border-radius;
+  .box-shadow(0 6px 12px rgba(0,0,0,.175));
+  background-clip: padding-box;
+
+  &.pull-right {
+    right: 0;
+    left: auto;
+  }
+
+  .divider {
+    height: 1px;
+    margin: ((@line-height-computed / 2) - 1) 0;
+    overflow: hidden;
+    background-color: @menu-dropdown-divider-bg;
+  }
+
+  > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: @line-height-base;
+    color: @menu-dropdown-link-color;
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+  }
+}
+
+.@{ui-prefix}dropdown-menu > li > a {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: @menu-dropdown-link-hover-color;
+    background-color: @menu-dropdown-link-hover-bg;
+  }
+}
+
+.@{ui-prefix}dropdown-menu > .active > a {
+  &,
+  &:hover,
+  &:focus {
+    color: @menu-dropdown-link-active-color;
+    text-decoration: none;
+    outline: 0;
+    background-color: @menu-dropdown-link-active-bg;
+  }
+}
+
+.@{ui-prefix}dropdown-menu > .disabled > a {
+  &,
+  &:hover,
+  &:focus {
+    color: @menu-dropdown-link-disabled-color;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: transparent;
+    background-image: none;
+    cursor: @cursor-disabled;
+  }
+}
+
+.open {
+  > .@{ui-prefix}dropdown-menu {
+    display: block;
+  }
+
+  > a {
+    outline: 0;
+  }
+}
+
+.@{ui-prefix}dropdown-menu-right {
+  left: auto;
+  right: 0;
+}
+
+.@{ui-prefix}dropdown-menu-left {
+  left: 0;
+  right: auto;
+}
+
+.@{ui-prefix}dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  font-size: @font-size-small;
+  line-height: @line-height-base;
+  color: @menu-dropdown-header-color;
+  white-space: nowrap; // as with > li > a
+}
+
+.@{ui-prefix}dropdown-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: (@menu-dropdown-zindex - 10);
+}
+
+.pull-right > .@{ui-prefix}dropdown-menu {
+  right: 0;
+  left: auto;
+}

@@ -1,0 +1,143 @@
+@import "../../var-ui";
+
+//
+// 控制器 -- 方向。
+// --------------------------------------------------
+@joystick-font-size:              1em;
+@joystick-height:                 12em;
+@joystick-width:                  12em;
+@joystick-ratio:                  1.5;
+
+@joystick-button-font-size:       @joystick-font-size * @joystick-ratio;
+@joystick-button-height:          @joystick-height / @joystick-ratio / 2;
+@joystick-button-width:           @joystick-width / @joystick-ratio / 2;
+
+@joystick-center-font-size:       @joystick-font-size * @joystick-ratio;
+@joystick-center-height:          3em;
+@joystick-center-width:           3em;
+
+@z-index:    10;
+
+.@{ui-prefix}joystick {
+    position: relative;
+    height: @joystick-height;
+}
+
+.@{ui-prefix}joystick-center {
+    background: none;
+    background-color: @bg-grey-1;
+    border: none;
+    border-radius: 50%;
+    color: @color-black;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: @joystick-center-font-size;
+    height: @joystick-center-height;
+    left: 50%;
+    margin-top: -5.45em; // 经验值。
+    margin-left: -1.45em; // 经验值。
+    padding-top: 0em;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 100%;
+    width: @joystick-center-width;
+    z-index: @z-index + 1;
+    
+    &:hover {
+        background-color: @bg-grey;
+    }
+}
+
+.@{ui-prefix}joystick-direction {
+    background: transparent;
+    border-radius: 50%;
+    height: @joystick-height;
+    left: 50%;
+    margin-top: -@joystick-height;
+    margin-left: -@joystick-width / 2;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    width: @joystick-width;
+    z-index: @z-index;
+    
+    &:after {
+        border-radius: 50%;
+        color: transparent;
+        content: ".";
+        display: block;
+        height: @joystick-center-height * 2;
+        left: 50%;
+        margin-left: -@joystick-center-width;
+        margin-top: -@joystick-center-height;
+        position: absolute;
+        top: 50%;
+        width: @joystick-center-width * 2;
+        z-index: @z-index;
+    }
+    
+    ul {
+        list-style: none;
+        position: relative;
+        
+        li {
+            border: 2px solid transparent;
+            font-size: @joystick-button-font-size;
+            height: @joystick-button-height;
+            overflow: hidden;
+            pointer-events: none;
+            position: absolute;
+            transform-origin: 100% 100%;
+            width: @joystick-button-width;
+            
+            a {
+                background: radial-gradient(transparent 40%, @bg-grey 40%);
+                border-radius: 50%;
+                bottom: -@joystick-center-height / @joystick-ratio;
+                color: @color-white;
+                display: block;
+                font-size: @joystick-center-font-size;
+                height: @joystick-center-height * 2 / @joystick-ratio;
+                line-height: 2;
+                pointer-events: auto;  
+                position: absolute;
+                right: -@joystick-center-width / @joystick-ratio;
+                text-align: center;
+                text-decoration: none;
+                width: @joystick-center-width * 2 / @joystick-ratio;
+                
+                &:hover {
+                    background: radial-gradient(transparent 40%, @bg-grey-5 40%);
+                }
+                
+                i.fa {
+                    display: block;
+                    left: -1.1em;  // 经验值。
+                    font-size: @joystick-font-size;
+                    font-weight: 700;
+                    position: relative;
+                    top: 0.4em;  // 经验值。
+                    transform: rotate(-45deg);
+                }
+            }
+            
+            &:nth-child(1) {
+                transform: rotate(45deg);
+            }
+            
+            &:nth-child(2) {
+                transform: rotate(135deg);
+            }
+            
+            &:nth-child(3) {
+                transform: rotate(225deg);
+            }
+            
+            &:nth-child(4) {
+                transform: rotate(315deg);
+            }
+        }
+    }
+}

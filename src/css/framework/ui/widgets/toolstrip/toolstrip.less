@@ -1,0 +1,27 @@
+@import "../../var-ui";
+
+//
+// 工具条控件。
+// --------------------------------------------------
+
+.@{ui-prefix}toolstrip {
+    padding: @space-base @space-base * 2;
+    display: table;
+}
+
+.@{ui-prefix}toolstrip-pane {
+    display: table-cell;
+    vertical-align: top;
+}
+
+//== 
+ul.@{ui-prefix}toolstrip {
+    display: table;
+    list-style: none;
+    padding: @space-base @space-base * 2;
+  
+    & > li {
+        display: table-cell;
+        vertical-align: top;
+    }
+}

@@ -1,0 +1,28 @@
+@import "../../var-ui";
+
+//
+// 卡片控件 -- 卡片位置。
+// --------------------------------------------------
+
+//== 左。
+.@{ui-prefix}tabbed-left {
+    display: table;
+    position: relative;
+
+    .@{ui-prefix}tabbed-bar {
+        display: table-cell;
+    }
+
+    .@{ui-prefix}tabbed-content {
+        display: table-cell;
+        position: relative;
+    }
+    
+    .@{ui-prefix}tabbed-panel {
+        position: absolute;
+    }
+
+    .@{ui-prefix}panel-body {
+        height: 100%;
+    }
+}

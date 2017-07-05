@@ -1,0 +1,94 @@
+@import "../var-ui";
+
+//
+// 网格布局（内联方式）。
+// --------------------------------------------------
+
+.@{ui-prefix}layout-grid {
+    display: block;
+    // word-spacing: -.5em;
+    height: 100%;
+    padding: @space-base;
+    position: relative;
+    width: 100%;
+    
+    & > div {
+        display: inline-block;
+        word-spacing: 0;
+        margin: @space-base 0;
+    }
+}
+
+//== 生成方法
+.generate-grid-row(@rowCount, @columnCount, @rowIndex: 1) when (@rowIndex =< @rowCount) {
+
+    // 循环列。
+    .generate-grid-column(@rowIndex, @columnCount);
+
+    .generate-grid-row(@rowCount, @columnCount, (@rowIndex + 1));
+}
+
+.generate-grid-column(@rowIndex, @columnCount, @columnIndex: 1) when (@columnIndex =< @columnCount) {
+    @height: (@rowIndex + 2) * @space-base;
+    @width: (@columnIndex + 1) * @space-base;
+
+    .@{ui-prefix}layout-grid.r@{rowIndex}c@{columnIndex} > div {
+        height: calc(~'(100% - @{height}) / @{rowIndex}');
+        width: calc(~'(100% - @{width}) / @{columnIndex}');
+        
+        //height: calc((100% - ((@rowIndex - 1) * @space-base)) / @rowIndex);
+        //width: calc((100% - ((@columnIndex - 1) * @space-base)) / @columnIndex);
+    }
+
+    .generate-grid-column(@rowIndex, @columnCount, (@columnIndex + 1));
+}
+
+//== 生成网格。
+.generate-grid-row(4, 4);
+
+//
+// 网格布局（浮动方式）。
+// --------------------------------------------------
+
+.@{ui-prefix}layout-grid-float {
+    display: block;
+    height: 100%;
+    padding: @space-base;
+    position: relative;
+    width: 100%;
+    
+    &::after {
+        content: '';
+        clear: both;
+    }
+    
+    & > div {
+        display: block;
+        float: left;
+        margin: @space-base 0;
+    }
+}
+
+//== 生成方法
+.generate-grid-row-float(@rowCount, @columnCount, @rowIndex: 1) when (@rowIndex =< @rowCount) {
+
+    // 循环列。
+    .generate-grid-column-float(@rowIndex, @columnCount);
+
+    .generate-grid-row-float(@rowCount, @columnCount, (@rowIndex + 1));
+}
+
+.generate-grid-column-float(@rowIndex, @columnCount, @columnIndex: 1) when (@columnIndex =< @columnCount) {
+    @height: (@rowIndex + 2) * @space-base;
+    @width: (@columnIndex + 1) * @space-base;
+
+    .@{ui-prefix}layout-grid-float.r@{rowIndex}c@{columnIndex} > div {
+        height: 100% / @rowIndex;
+        width: 100% / @columnIndex;
+    }
+
+    .generate-grid-column-float(@rowIndex, @columnCount, (@columnIndex + 1));
+}
+
+//== 生成网格。
+.generate-grid-row-float(4, 4);

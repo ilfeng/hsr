@@ -1,0 +1,66 @@
+@import "../../var-ui";
+
+//
+// 按钮控件（按钮效果）。
+// --------------------------------------------------
+
+//== 描边
+.@{ui-prefix}btn-border,
+.@{ui-prefix}btn-group-border .@{ui-prefix}btn {
+	border: @border-grey;
+	border-radius: @border-radius;
+	padding: @space-base 2 * (@space-base + 1);
+}
+
+.@{ui-prefix}btn-border:hover,
+.@{ui-prefix}btn-group-border .@{ui-prefix}btn:hover {
+	border: @border-grey-5;
+}
+
+.@{ui-prefix}btn-border[disabled]:hover,
+.@{ui-prefix}btn-border.disabled:hover,
+.@{ui-prefix}btn-group-border .@{ui-prefix}btn[disabled]:hover,
+.@{ui-prefix}btn-group-border .@{ui-prefix}btn.disabled:hover,
+.@{ui-prefix}btn-border[readonly]:hover,
+.@{ui-prefix}btn-border.readonly:hover,
+.@{ui-prefix}btn-group-border .@{ui-prefix}btn[readonly]:hover,
+.@{ui-prefix}btn-group-border .@{ui-prefix}btn.readonly:hover {
+	border: @border-grey;
+}
+
+//== 填充
+.@{ui-prefix}btn-fill,
+.@{ui-prefix}btn-group-fill .@{ui-prefix}btn {
+    background: @bg-grey-1;
+    color: @color-black;
+	padding: @space-base 2 * (@space-base + 1);
+    
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: @bg-grey-3;
+    }
+}
+
+//== 发光
+.@{ui-prefix}btn-halo,
+.@{ui-prefix}btn-group-halo .@{ui-prefix}btn {
+	border-radius: @border-radius;
+	padding: @space-base 2 * (@space-base + 1);
+}
+
+.@{ui-prefix}btn-halo:hover,
+.@{ui-prefix}btn-group-halo .@{ui-prefix}btn:hover {
+	box-shadow: inset 0 1px 1px rgba(255,255,255,.075),0 0 8px rgba(255,255,255,.6);
+}
+
+.@{ui-prefix}btn-halo[disabled]:hover,
+.@{ui-prefix}btn-halo.disabled:hover,
+.@{ui-prefix}btn-group-halo .@{ui-prefix}btn[disabled]:hover,
+.@{ui-prefix}btn-group-halo .@{ui-prefix}btn.disabled:hover,
+.@{ui-prefix}btn-halo[readonly]:hover,
+.@{ui-prefix}btn-halo.readonly:hover,
+.@{ui-prefix}btn-group-halo .@{ui-prefix}btn[readonly]:hover,
+.@{ui-prefix}btn-group-halo .@{ui-prefix}btn.readonly:hover {
+	box-shadow: none;
+}

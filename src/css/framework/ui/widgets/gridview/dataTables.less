@@ -1,0 +1,85 @@
+@import "../../var-ui";
+
+//
+// 数据表格。
+// --------------------------------------------------
+
+.dataTable,
+.dataTable th,
+.dataTable td {
+    box-sizing: border-box;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.dataTable.no-footer {
+    border-bottom-width: 0;
+}
+
+.dataTables_wrapper {
+    // background: #fff;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.dataTables_wrapper.no-footer .dataTables_scrollBody {
+    border-bottom-width: 0;
+}
+
+table.dataTable thead th,
+table.dataTable thead td {
+    padding: @datagrid-head-padding-y @datagrid-head-padding-x + 4 @datagrid-head-padding-y @datagrid-head-padding-x - 4;
+}
+
+//== 分页
+.dataTables_wrapper .dataTables_paginate {
+    float: none;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    background: none;
+    border: 0;
+    color: #ffffff !important;
+    cursor: pointer;
+    margin: 0 2px;
+    min-width: 20px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: none;
+    border: 0;
+    color: #F90 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background: none;
+    border: 0;
+    color: yellow !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+    background: none;
+    border: 0;
+    color: #ffffff !important;
+    cursor: not-allowed;
+}
+
+// DataTables Extend
+.table-bottom{
+  display: table;
+  width: 100%;
+}
+
+.table-bottom > div {
+  display: table-cell;
+  padding: 0 5px;
+}
+
+.table-toolbar {
+  text-align: right;
+}

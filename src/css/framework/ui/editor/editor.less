@@ -1,0 +1,162 @@
+@import "../var-ui";
+
+//
+// 编辑框。
+// --------------------------------------------------
+
+.@{ui-prefix}editor {
+    display: inline-block;
+    position: relative;
+}
+
+// 附属。
+.@{ui-prefix}editor-addon {
+    display: inline-table;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
+
+.@{ui-prefix}editor-addon.right {
+    left: auto;
+    right: 1px;
+}
+
+.@{ui-prefix}editor-button {
+    display: table-cell;
+    background-color: transparent;
+    color: @color-black;
+    line-height: @line-height-computed;
+    height: @form-editor-addon-item-height;
+    text-align: center;
+    vertical-align: middle;
+    width: @form-editor-addon-item-width;
+    
+    &:hover {
+        background-color: @bg-grey-2;
+    }
+    
+    &:last-child {
+        border-radius: 0 @border-radius @border-radius 0;
+    }
+    
+}
+
+//== 组合框。
+.@{ui-prefix}editor-combo,
+.@{ui-prefix}editor-lookup,
+.@{ui-prefix}editor-popup {
+    position: relative;
+    
+    .@{ui-prefix}editor-display {
+        background-color: #fff;
+        cursor: auto;
+        padding-right: @form-editor-addon-item-width * 2 + @form-control-padding-right;
+    }
+    
+    &:hover .@{ui-prefix}editor-button.arrow {
+        background-color: @bg-grey-2;
+    }
+}
+
+//== 下拉框。
+// 下拉框面板内容 -- 文本列。
+.@{ui-prefix}editor-lookup-content {
+    background: @bg-white;
+    margin: @space-base;
+    
+    & > li {
+        padding: @space-base @space-base @space-base @space-base * 2;
+        
+        &:hover {
+            background: @bg-grey;
+        }
+    }
+}
+
+//== 弹出框。
+
+
+//== 日期/时间框。
+.@{ui-prefix}editor-date {
+    
+    .@{ui-prefix}editor-display {
+        padding-right: @form-editor-addon-item-width + @form-control-padding-right;
+    }
+    
+    &.datetime {
+        .@{ui-prefix}editor-display {
+            padding-right: 20px;
+            width: 12em;
+        }
+    }
+}
+
+.Wdate {
+    height: auto !important;
+    border: @border-grey !important;
+}
+
+//== 颜色框。
+.@{ui-prefix}editor-color {
+    
+    .@{ui-prefix}editor-display {
+        padding-left: @form-editor-addon-item-width + @form-control-padding-left;
+        padding-right: @form-editor-addon-item-width + @form-control-padding-right;
+        text-transform: uppercase;
+    }
+}
+
+.@{ui-prefix}indicater-color {
+    background: transparent;
+    border: @border-black;
+    display: block;
+    height: @form-editor-addon-item-height - @space-base;
+    margin: @space-base;
+    width: @form-editor-addon-item-height - @space-base;
+}
+
+//== 搜索框。
+.@{ui-prefix}editor-search {
+    position: relative;
+    
+    .@{ui-prefix}editor-display {
+        padding-right: @form-editor-addon-item-width + @form-control-padding-right;
+    }
+}
+
+//== 自动完成框。
+.ui-autocomplete {
+    padding: 2 * @space-base;
+    width: 200px;
+}
+
+.ui-menu {
+    background: @bg-white;
+    border: @border-grey;
+    border-radius: @border-radius;
+    box-shadow:1px 1px 5px @color-black;
+	list-style-type: none;
+    position:relative; 
+}
+
+.ui-menu-item {
+    border-radius: @border-radius;
+    margin: @space-base;
+    padding: @space-base;
+    cursor: pointer;
+    
+    &:hover {
+        background: @bg-grey-1;
+    }
+}
+
+//== 单选框 / 复选框。
+.@{ui-prefix}radio-group,
+.@{ui-prefix}checkbox-group {
+    padding: @space-base;
+    
+    label {
+        margin-right: 10px;
+    }
+}

@@ -1,0 +1,25 @@
+@import "../../var-ui";
+
+//
+// 面包屑。
+// --------------------------------------------------
+.@{ui-prefix}breadcrumb {
+    padding: @space-base @space-base * 2;
+    list-style: none;
+    border-radius: @border-radius;
+    word-spacing: -.5em;
+}
+
+.@{ui-prefix}breadcrumb > li {
+    display: inline-block;
+}
+
+.@{ui-prefix}breadcrumb > li + li:before {
+    padding: 0 @space-base;
+    color: @bg-grey;
+    content: '>';
+}
+
+.@{ui-prefix}breadcrumb > .active {
+    color: @bg-black;
+}

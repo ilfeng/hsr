@@ -1,0 +1,37 @@
+@import "../var-ui";
+
+//
+// 检验。
+// --------------------------------------------------
+
+//== 错误。
+input:not([type]),
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="text"],
+select {
+
+  &.error {
+    border-color: red;
+  }
+
+  &:focus.error {
+    outline: red auto 5px;
+  }
+}
+
+label.error {
+  margin-left: 5px;
+}
+
+label.required,
+.@{ui-prefix}form-label.required {
+  color: red;
+
+  &::before {
+    content: '*';
+  }
+}

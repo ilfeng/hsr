@@ -1,0 +1,108 @@
+@import "../var-ui";
+
+//
+// 表单。
+// --------------------------------------------------
+.@{ui-prefix}form-group {
+    display: inline-table;
+    margin: 4px;
+    vertical-align: top;
+}
+
+.@{ui-prefix}form-label {
+    display: table-cell;
+    text-align: right;
+    width: @form-label-width;
+    vertical-align: middle;
+    
+    &:after {
+        content: "：";
+    }
+
+    &.sr-only {
+        display: none;
+    }
+}
+
+.@{ui-prefix}form-controls {
+    display: table-cell;
+}
+
+.@{ui-prefix}form-control {
+    border: @border-grey;
+    border-radius: @border-radius;
+    line-height: @line-height-computed;
+    height: @form-control-height;
+    padding: @form-control-padding-y @form-control-padding-x;
+    width: @form-control-width;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    
+    &[readonly] {
+        background-color: @bg-grey-2;
+    }
+    
+    &[disabled] {
+        background-color: @bg-grey-2;
+        cursor: not-allowed;
+    }
+    
+    &:focus {
+        border-color: #66afe9;
+        outline: 0;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    }
+}
+
+//== 文本域。
+textarea.@{ui-prefix}form-control {
+    height: inherit;
+    width: inherit;
+}
+
+//== 文件。
+input[type="file"].@{ui-prefix}form-control {
+    padding: 0;
+    width: auto;
+}
+
+//== 按钮。
+
+
+
+//== 标签宽度。
+
+// 流布局。
+.@{ui-prefix}form-flow {
+    .@{ui-prefix}form-label {
+        width: auto;
+    }
+}
+
+// 固定宽布局 -- 小。
+.@{ui-prefix}form-fixed-sm {
+    .@{ui-prefix}form-label {
+        width: @form-label-width-sm;
+    }
+}
+
+// 固定宽布局 -- 中。
+.@{ui-prefix}form-fixed {
+    .@{ui-prefix}form-label {
+        width: @form-label-width;
+    }
+}
+
+// 固定宽布局 -- 大。
+.@{ui-prefix}form-fixed-l {
+    .@{ui-prefix}form-label {
+        width: @form-label-width-l;
+    }
+}
+
+// 固定宽布局 -- 大。
+.@{ui-prefix}form-fixed-xl {
+    .@{ui-prefix}form-label {
+        width: @form-label-width-xl;
+    }
+}

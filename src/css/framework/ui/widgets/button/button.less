@@ -1,0 +1,33 @@
+@import "../../var-ui";
+
+//
+// 按钮控件（单个按钮）。
+// --------------------------------------------------
+.@{ui-prefix}btn {
+	display: block;
+	cursor: pointer;
+	padding: 0 @space-base;
+    line-height: @line-height-computed;
+    
+    & > .@{ui-prefix}icon,
+    & > .fa {
+        /*vertical-align: middle;*/
+        margin-right: @space-base;
+        
+        &:only-child {
+            margin-right: 0;
+        }
+    }
+    
+    &:focus {
+        outline: 0;
+    }
+}
+
+.@{ui-prefix}btn[disabled],
+.@{ui-prefix}btn[readonly],
+.@{ui-prefix}btn.disabled,
+.@{ui-prefix}btn.readonly {
+    color: @color-grey !important;;
+    pointer-events: none;
+}

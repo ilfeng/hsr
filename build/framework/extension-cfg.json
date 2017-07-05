@@ -1,0 +1,13 @@
+{
+    "baseUrl": "src/js/framework/extension",
+    "name": "extension",
+    "out": "extension.js",
+    "paths": {
+        "jquery-extension": "jquery",
+        "jquery-validate-extension": "validate"
+    },
+    "include": [
+        "jquery-extension",
+        "jquery-validate-extension"
+    ]
+}

@@ -1,0 +1,62 @@
+@import "../../var-ui";
+
+//
+// 分页控件。
+// --------------------------------------------------
+
+.@{ui-prefix}paging {
+    height: @line-height-computed + 4 * @space-base;
+    line-height: @line-height-computed;
+    padding: @space-base 2 * @space-base;
+    
+    &:after {
+        content: '';
+        clear: both;   
+    }
+}
+
+.@{ui-prefix}paging-info {
+    float:left;
+    height: @line-height-computed + 2 * @space-base;
+}
+
+.@{ui-prefix}paging-index {
+    color: @color-grey-5;
+    float: right;
+    height: @line-height-computed + 2 * @space-base;
+}
+
+.@{ui-prefix}paging-length {
+    padding: @space-base;
+}
+
+.@{ui-prefix}paging-totalsize {
+    color: #cb0a0a; 
+    margin: 0 @space-base;
+}
+
+.@{ui-prefix}paging-pageindex {
+    color: #cb0a0a; 
+    margin: 0 @space-base;
+}
+
+.@{ui-prefix}paging-pagecount {
+    margin: 0 @space-base;
+}
+
+.@{ui-prefix}paging-button {
+    color: @bg-black;
+    text-decoration: none;
+}
+
+.@{ui-prefix}btn-changepage {
+    border: @border-grey;
+    color: @color-black;
+    height: 23px; 
+    width: 40px; 
+    margin-top: -3px;
+}
+
+.@{ui-prefix}text-pageindex {
+    width: 4em !important;
+}

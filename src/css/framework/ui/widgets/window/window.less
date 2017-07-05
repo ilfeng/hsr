@@ -1,0 +1,78 @@
+@import "../var-ui";
+
+//
+// 窗口控件。
+// --------------------------------------------------
+
+.@{ui-prefix}window {
+    display: table;
+}
+
+//== 导航条
+.@{ui-prefix}window-navbar {
+    height: @window-navbar-height;
+    background: @window-navbar-background-image;
+    border-radius: @border-radius 0 0 0;
+    border-bottom: @window-navbar-border-width solid @window-navbar-border-color;
+}
+
+.@{ui-prefix}window-navbar::after {
+    clear: both;
+}
+
+// 内嵌卡片
+.@{ui-prefix}window-navbar .@{ui-prefix}tabbed {
+    float: left;
+}
+
+// 控制区域
+.@{ui-prefix}window-controlbox {
+    float: right;
+    height: @window-navbar-height;
+}
+
+// 控制按钮
+.@{ui-prefix}window-button {
+    display: inline-block;
+    margin: 4px;
+    width: @window-button-width;
+    height: @window-button-height;
+    line-height: @window-navbar-height - 8;
+    font-family: @font-awesome;
+    text-align: center;
+    cursor: pointer;
+}
+
+.@{ui-prefix}window-button.minimize {
+    background: url("@{ui-icons-btn-url}") no-repeat;
+    width: 35px;
+    height: 16px;
+    background-position: -121px -6px;
+}
+
+.@{ui-prefix}window-button.maximize {
+    background-image: url("@{ui-images-url}/common/ui/tabs-control-up.png");
+}
+
+.@{ui-prefix}window-button.restore {
+    background: url("@{ui-icons-btn-url}") no-repeat;
+    width: 35px;
+    height: 16px;
+    background-position: -4px -6px;
+}
+
+.@{ui-prefix}window-button.close {
+    background: url("@{ui-icons-btn-url}") no-repeat;
+    width: 35px;
+    height: 16px;
+    background-position: -82px -6px;
+}
+
+.@{ui-prefix}window-button.disable {
+    cursor: not-allowed;
+}
+
+//== 内容
+.@{ui-prefix}window-content {
+    background-color: @window-content-background-color;
+}

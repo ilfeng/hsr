@@ -1,0 +1,150 @@
+@import "../../var-ui";
+
+//
+// 数据表格。
+// --------------------------------------------------
+table.@{ui-prefix}datagrid {
+    border: 0;
+    border-collapse: collapse;
+}
+
+table.@{ui-prefix}datagrid,
+table.@{ui-prefix}datagrid th,
+table.@{ui-prefix}datagrid td {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.@{ui-prefix}datagrid td,
+.@{ui-prefix}datagrid th {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
+    &:hover {
+        overflow: visible;
+        text-overflow: inherit;
+        white-space: normal;
+    }
+}
+
+.@{ui-prefix}datagrid th {
+    vertical-align: middle;
+}
+
+.@{ui-prefix}datagrid thead th,
+.@{ui-prefix}datagrid thead td {
+    padding: @datagrid-head-padding-y @datagrid-head-padding-x + 4 @datagrid-head-padding-y @datagrid-head-padding-x - 4;
+}
+
+.@{ui-prefix}datagrid tbody td {
+    text-align: center;
+}
+
+.@{ui-prefix}datagrid thead tr {
+    height: 30px;
+}
+
+.@{ui-prefix}datagrid tbody tr {
+    height: 30px;
+}
+
+.@{ui-prefix}datagrid-align-left {
+    text-align: left;
+}
+
+.@{ui-prefix}datagrid-align-right {
+    text-align: right;
+}
+
+//== 边框颜色
+table.@{ui-prefix}datagrid-bordered {
+    border-color: @datagrid-border-color;
+    border-style: solid;
+    border-width: @datagrid-border-width 0 0 0;
+}
+
+.@{ui-prefix}datagrid-bordered thead th,
+.@{ui-prefix}datagrid-bordered thead td {
+    border-bottom: @datagrid-border-color @datagrid-border-width solid;
+    border-right: @datagrid-head-border-color @datagrid-head-border-width solid;
+}
+
+.@{ui-prefix}datagrid-bordered thead tr:last-child th,
+.@{ui-prefix}datagrid-bordered thead tr:last-child td {
+    border-bottom: 0;
+}
+
+.@{ui-prefix}datagrid-bordered tbody td {
+    border-bottom: @datagrid-body-border-color @datagrid-body-border-width solid;
+    border-right: @datagrid-body-border-color @datagrid-body-border-width solid;
+}
+
+.@{ui-prefix}datagrid-bordered thead tr th:last-child,
+.@{ui-prefix}datagrid-bordered tbody tr td:last-child {
+    border-right-width: 0;
+}
+
+//== 背景颜色
+.@{ui-prefix}datagrid-striped thead tr {
+    background-color: @datagrid-head-bg-color;
+    color: @datagrid-head-color;
+}
+
+.@{ui-prefix}datagrid-striped tbody tr {
+    background-color: @datagrid-body-bg-color;
+    color: @datagrid-body-color;
+}
+
+.@{ui-prefix}datagrid-striped tbody tr:nth-child(odd) {
+    background-color: @datagrid-body-odd-bg-color;
+    
+    td {
+        border-color: @datagrid-body-odd-border-color;
+    }
+    
+    a {
+        color: @datagrid-body-odd-color;
+    }
+}
+
+.@{ui-prefix}datagrid-striped tbody tr:nth-child(even) {
+    background-color: @datagrid-body-even-bg-color;
+    
+    td {
+        border-color: @datagrid-body-even-border-color;
+    }
+    
+    a {
+        color: @datagrid-body-even-color;
+    }
+}
+
+.@{ui-prefix}datagrid-striped tbody tr.selected {
+    background-color: @datagrid-body-active-bg-color;
+    color: @datagrid-body-active-color;
+    
+    td {
+        border-color: @datagrid-body-active-border-color;
+    }
+    
+    a {
+        color: @datagrid-body-active-color;
+    }
+}
+
+//== 滑动颜色
+.@{ui-prefix}datagrid-hover tbody tr:hover,
+.@{ui-prefix}datagrid-hover tbody tr:nth-child(even):hover,
+.@{ui-prefix}datagrid-hover tbody tr:nth-child(odd):hover {
+    background-color: @datagrid-body-hover-bg-color;
+    
+    td {
+        border-color: @datagrid-body-hover-border-color;
+    }
+    
+    a {
+        color: @datagrid-body-hover-color;
+    }
+}

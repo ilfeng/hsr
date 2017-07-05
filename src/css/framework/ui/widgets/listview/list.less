@@ -1,0 +1,52 @@
+@import "../../var-ui";
+
+//
+// 列表。
+// --------------------------------------------------
+.@{ui-prefix}list {
+    display: block;
+    list-style: none;
+    position: relative;
+    word-spacing: 0;
+}
+
+.@{ui-prefix}list-item {
+    display: inline-table;
+    padding: @space-base;
+    min-width: 50%;
+    word-spacing: 0;
+    
+    &.selected > .@{ui-prefix}list-content {
+        font-weight: bold;
+    }
+}
+
+.@{ui-prefix}list-content {
+    display: table-cell;
+    margin: @space-base;
+}
+
+.@{ui-prefix}list-text {
+    margin: 0;
+    padding: 0;
+}
+
+.@{ui-prefix}list-sub {
+    display: table-cell;
+    padding: @space-base;
+    vertical-align: top;
+}
+
+
+//== 带图标的视图。
+.@{ui-prefix}list-content.center {
+    text-align: center;
+}
+
+.@{ui-prefix}list-icon {
+    margin: @space-base;
+}
+
+.@{ui-prefix}list.center > .@{ui-prefix}list-item > .@{ui-prefix}list-content {
+    text-align: center;
+}

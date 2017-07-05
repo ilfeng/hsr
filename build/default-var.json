@@ -1,0 +1,19 @@
+{
+    "usePrefix": false,
+    "patterns": [{
+        "match": "@VERSION@",
+        "replacement": "1.0.0"
+    }, {
+        "match": "@CSS_PREFIX@",
+        "replacement": "hsrui-"
+    }, {
+        "match": "@EVENT_POSTFIX@",
+        "replacement": ".hsrui"
+    }, {
+        "match": "@UI_CLASS_ACTIVE@",
+        "replacement": "active"
+    }, {
+        "match": "@UI_CLASS_SELECTED@",
+        "replacement": "selected"
+    }]
+}

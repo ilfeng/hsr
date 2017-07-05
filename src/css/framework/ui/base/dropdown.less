@@ -1,0 +1,24 @@
+@import "../var-ui";
+
+//
+// 编辑框 -- 下拉面板。
+// --------------------------------------------------
+.@{ui-prefix}dropdown-panel {
+    background: @bg-white;
+    border: @border-grey;
+    border-radius: @border-radius;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    min-height: 20px;
+    overflow: auto;
+    z-index: @form-editor-dropdown-zindex;
+}
+
+.@{ui-prefix}dropdown-panel.content {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+}
