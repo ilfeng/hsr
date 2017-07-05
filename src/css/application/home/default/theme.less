@@ -1,7 +1,5 @@
-
 //== 前缀
 @ui-prefix:                                hsrui-;
-
 @layout-space-base:                        5px;
 @layout-border-radius:                     3px;
 @workbench-border-color:                   #cccccc;
@@ -25,8 +23,9 @@ body {
     width: 100%;
 }
 
+@import "../../mixins/prefixer";
+@import "fragments/navbar";
 @import "fragments/layout";
 @import "fragments/icon";
-@import "fragments/navbar";
 @import "fragments/function";
 @import "fragments/workbench";
