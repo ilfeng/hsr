@@ -64,21 +64,7 @@ ol,ul{
       a{
         display: block;
       }
-      .@{ui-prefix}icon-bell:before{
-        width:35px;
-        content: "\e123";
-      }
       .@{ui-prefix}badge{
-        @height:15px;
-        left: 50%;
-        width: @height;
-        height: @height;
-        line-height: @height;
-        margin-left: 0;
-        margin-top: -15px;
-        position: absolute;
-        top: 50%;
-        border-radius:50%;
         background-color:@color-red;
         color: @color-white;
       }
@@ -205,6 +191,7 @@ ol,ul{
   }
   .@{ui-prefix}mainbox-canvas{
     margin-left: @accordion-width;
+    height: 100%;
     .@{ui-prefix}breadcrumb{
       border-bottom: 1px solid #cfd8dc;
       margin-bottom: 1.5rem;
@@ -237,12 +224,6 @@ ol,ul{
         color: @color-gray;
       }
     }
-  }
-  .@{ui-prefix}container-fluid{
-    margin: 2em;
-    content: "zhuti";
-    height:100%;
-    border: 1px solid @color-bule;
   }
 }
 

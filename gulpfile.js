@@ -257,10 +257,6 @@ gulp.task('build-app', ['build-login', 'build-main']);
 //npm 调用
 gulp.task('build', ['build-static','build-framework', 'build-app']);
 
-gulp.task('test', function() {
-    return gulp.src('./src/html/*.html')
-        .pipe(qunit());
-});
 gulp.task('webserver', function() {
     gulp.src('')
         .pipe(webserver({
