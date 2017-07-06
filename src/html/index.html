@@ -42,33 +42,40 @@
     <ul class="hsrui-navbar-nav hsrui-float-r">
         <li class="hsrui-message">
             <a href="#">
-                <i class="hsrui-icon-bell fa fa-bell"></i>
-                <span class="hsrui-badge ne">1</span>
+                <i class="fa fa-bell"></i>
+                <span class="hsrui-badge ne">99+</span>
             </a>
         </li>
 
         <li class="hsrui-dropdown">
-            <a href="#" class="dropdown-navmenu">
+            <a href="#" class="hsrui-dropdown-toggle" data-toggle="dropdown" id="gongneng">
                 <img src="http://www.17sucai.com/preview/2/2017-04-23/coreui/img/avatars/6.jpg" class="hsrui-img-avatar" alt="">
                 <span class="hsrui-hidden-md-down">张赛康</span>
+                <span class="hsrui-caret"></span>
             </a>
-            <div class="hsrui-dropdown-menu">
-                <div class="hsrui-dropdown-header">
-                    用户工具
-                </div>
-                <a href="#">
-                    <i class="hsrui-ico-a"></i> 修改信息
-                </a>
-                <a href="#">
-                    <i class="hsrui-ico-b"></i> 修改密码
-                </a>
-                <a href="#">
-                    <i class="hsrui-ico-c"></i> 马甲管理
-                </a>
-                <a href="#">
-                    <i class="hsrui-ico-d"></i> 发送自定义消息
-                </a>
-            </div>
+            <ul class="hsrui-dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="gongneng">
+                <li class="hsrui-dropdown-header">功能列表</li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-user"></i> 修改信息
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-lock"></i> 修改密码
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-users"></i> 马甲管理
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-envelope"></i> 发送自定义消息
+                    </a>
+                </li>
+            </ul>
         </li>
     </ul>
 </div>
@@ -99,8 +106,7 @@
             </li>
         </ul>
     </div>
-    <div class="hsrui-mainbox-canvas">.
-        <iframe class="hsrui-mainbox-content" width="100%" height="100%" frameborder="0" scrolling="auto" src="/dist/html/list.html">[操作页面]</iframe>
+    <div class="hsrui-mainbox-canvas">
     </div>
 </div>
 

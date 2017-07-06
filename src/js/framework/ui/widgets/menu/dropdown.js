@@ -83,7 +83,7 @@ define(['jquery', 'core', 'ui-control', 'ui-tool-manager'], function ($, hsr, _s
             var self = this;
             _superMethods._create.call(self, element$, options);
             
-            $('.' + self.cssClass + '-toggle').on('click', function(){
+            $('.' + self.cssClass + '-toggle', element$).on('click', function(){
                 self._toggleMenu();
                 return false;
             });
@@ -120,13 +120,12 @@ define(['jquery', 'core', 'ui-control', 'ui-tool-manager'], function ($, hsr, _s
          */
         _toggleMenu: function () {
             var self = this, elem$ = self._element$;
-            
-            self._clearMenu();
-            
+
             if(!elem$.hasClass('open')) {
                 elem$.addClass('open');
-                
                 $(document).one('click', $.proxy(self._clearMenu, self));
+            }else{
+                self._clearMenu();
             }
         }
     });
