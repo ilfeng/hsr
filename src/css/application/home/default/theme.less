@@ -1,3 +1,4 @@
+@import "../../mixins/prefixer";
 //== 前缀
 @ui-prefix:                                hsrui-;
 @layout-space-base:                        5px;
@@ -23,9 +24,111 @@ body {
     width: 100%;
 }
 
-@import "../../mixins/prefixer";
-@import "fragments/navbar";
-@import "fragments/layout";
-@import "fragments/icon";
-@import "fragments/function";
-@import "fragments/workbench";
+@color-white: rgba(255,255,255,1);
+@color-gray: rgba(0,0,0,.3);
+@color-dark-gray: rgba(0,0,0,.6);
+@color-black: rgba(0,0,0,.9);
+@color-red:rgba(255,2,0,.6);
+@color-bule:#20a8d8;
+@color-bule-h:#167495;
+@font-size-1em:1em;
+@float-l: left;
+@float-r: right;
+@none:none;
+@header-navbar-height:50px;//主导航高度
+@accordion-width:250px;//主体容器手风琴宽度
+//否掉第三方默认样式
+.@{ui-prefix}navbar-brand{
+    float:@float-l;
+    width: 220px;
+    height: @header-navbar-height;
+    min-height: @header-navbar-height;
+    background: url("http://www.17sucai.com/preview/2/2017-04-23/coreui/img/logo.png") no-repeat center center;
+    background-size:70% auto;
+    display: inline-block;
+    margin-right: 0;
+    text-indent: -9999rem;
+}
+.@{ui-prefix}message{
+    position: relative;
+    a{
+        display: block;
+    }
+    .@{ui-prefix}badge{
+        background-color:@color-red;
+        color: @color-white;
+    }
+}
+.@{ui-prefix}dropdown{
+    .@{ui-prefix}img-avatar{
+        width: 20px;
+        height: 20px;
+        .rounded-corners(50%);
+    }
+    .@{ui-prefix}hidden-md-down{
+        margin: 0 8px;
+        position: relative;
+        color: @color-gray;
+    }
+}
+a{
+    color: @color-gray;
+    text-decoration: @none;
+    &:hover {
+        color: @color-dark-gray;
+        text-decoration: @none;
+    }
+}
+//主体容器
+.@{ui-prefix}home-mainbox{
+    position: relative;
+    padding-top:@header-navbar-height ;
+    .@{ui-prefix}mainbox-sidebar{
+        float:@float-l;
+        width:@accordion-width;
+        height: calc(100vh - 55px);
+        background: #263238 none repeat scroll 0 0;
+        color: #fff;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 100%;
+        position: fixed;
+    }
+    .@{ui-prefix}mainbox-canvas{
+        margin-left: @accordion-width;
+        height: 100%;
+        .@{ui-prefix}breadcrumb{
+            border-bottom: 1px solid #cfd8dc;
+            margin-bottom: 1.5rem;
+            position: relative;
+            background-color: #fff;
+            padding:1em;
+            overflow: hidden;
+            .@{ui-prefix}breadcrumb-item{
+                float: @float-l;
+                color: @color-black;
+                a{
+                    color: @color-bule;
+                    text-decoration: @none;
+                    &:hover{
+                        color:@color-bule-h ;
+                        text-decoration:underline;
+                    }
+                }
+            }
+            .@{ui-prefix}breadcrumb-item + .@{ui-prefix}breadcrumb-item{
+                &:before {
+                    color: @color-gray;
+                    content: "/";
+                    display: inline-block;
+                    padding-left: 0.5rem;
+                    padding-right: 0.5rem;
+                }
+            }
+            .@{ui-prefix}active{
+                color: @color-gray;
+            }
+        }
+    }
+}
