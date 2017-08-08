@@ -60,9 +60,11 @@ define(['jquery', 'jquery-validate', 'jquery-validate-messages_zh'], function ($
         },
         highlight: function (element) {
             $(element).parents('.@CSS_PREFIX@form-group').addClass('@CSS_PREFIX@has-error');
+            $(element).parents('.form-group').addClass('@CSS_PREFIX@has-error');
         },
         unhighlight: function (element) {
             $(element).parents('.@CSS_PREFIX@form-group').removeClass('@CSS_PREFIX@has-error');
+            $(element).parents('.form-group').removeClass('@CSS_PREFIX@has-error');
         }
     });
 

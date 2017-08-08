@@ -127,7 +127,6 @@ define(['jquery', 'core', 'ui-container', 'ui-tool-manager'], function ($, hsr, 
                 hHeight = self._head$.outerHeight(),
                 tHeight = self._foot$.outerHeight(),
                 bHeight = eHeight - hHeight - tHeight;
-
             self._body$.css('height', bHeight);
             //}
         }

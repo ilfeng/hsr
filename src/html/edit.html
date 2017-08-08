@@ -20,8 +20,8 @@
     <link rel="stylesheet" href="/dist/css/lib/jquery.contextMenu-1.6.6.css" />
     <link rel="stylesheet" href="/dist/css/lib/zTreeStyle-3.5.css" />
     <link rel="stylesheet" href="/dist/css/lib/jquery.fancybox-2.1.5.css" />
-    <link rel="stylesheet" href="/dist/css/framework.css" />
     <link rel="stylesheet" href="/dist/css/lib/bootstrap-3.3.4.min.css" />
+    <link rel="stylesheet" href="/dist/css/framework.css" />
     <link rel="stylesheet" href="/dist/css/modules/themes/default/theme.css" />
     <link rel="stylesheet" href="/dist/css/modules/themes/default/skins/skin0101/skin.css" />
 </head>
@@ -38,26 +38,36 @@
     </div>
 </div>
 <div class="hsrui-page hsrui-page-edit">
+    <div class="hsrui-page-head " >
+        <div class="hsrui-breadcrumbs">
+            <ul class="hsrui-breadcrumb">
+                <li>1111</li>
+                <li>2222</li>
+            </ul>
+        </div>
+    </div>
     <div class="hsrui-bg-danger"></div>
-    <form action="" method="post" class="hsrui-form-fixed" role="form">
+    <form action="/dist/html/savesuccess.json" method="post" class="hsrui-form-fixed" role="form">
         <div class="row">
-            <div class="form-group col-sm-6">
-                <label class="form-label hsrui-form-label col-sm-4 required">姓名:</label>
-                <div class="form-controls hsrui-form-controls  col-sm-8">
+            <div class="form-group col-sm-12">
+                <label class="form-label hsrui-form-label col-sm-2 required text-right">姓名</label>
+                <div class="form-controls hsrui-form-controls  col-sm-10">
                     <input type="text" class=" hsrui-editor hsrui-form-control" maxlength="128" required="true" name="driverName" placeholder="姓名" value=""/>
                 </div>
             </div>
-            <div class="form-group col-sm-6">
-                <label class="form-label hsrui-form-label col-sm-4 required">代码:</label>
-                <div class="form-controls hsrui-form-controls col-sm-8">
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-12">
+                <label class="form-label hsrui-form-label col-sm-2 required text-right">代码</label>
+                <div class="form-controls hsrui-form-controls col-sm-10">
                     <input type="text" class=" hsrui-editor hsrui-form-control" maxlength="128" required="true" name="driverNo" placeholder="司机代码 " value=""/>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="form-group col-sm-6">
-                <label class="form-label hsrui-form-label col-sm-4 required">多选</label>
-                <div class="form-controls hsrui-form-controls col-sm-8">
+            <div class="form-group col-sm-12">
+                <label class="form-label hsrui-form-label col-sm-2 required">多选</label>
+                <div class="form-controls hsrui-form-controls col-sm-10">
                     <div class="hsrui-editor hsrui-checkbox-group">
                         <input type="checkbox" name="checkbox" value="1111" required/>
                         <span>1111</span>
@@ -66,9 +76,11 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group col-sm-6">
-                <label class="form-label hsrui-form-label col-sm-4 required">单选</label>
-                <div class="form-controls hsrui-form-controls col-sm-8">
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-12">
+                <label class="form-label hsrui-form-label col-sm-2 required">单选</label>
+                <div class="form-controls hsrui-form-controls col-sm-10">
                     <div class="hsrui-editor hsrui-radio-group">
                         <input type="radio" name="radio" value="1111" required/>
                         <span>1111</span>
@@ -79,9 +91,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="form-group col-sm-6">
-                <label class="form-label hsrui-form-label col-sm-4 required">select</label>
-                <div class="form-controls hsrui-form-controls col-sm-8">
+            <div class="form-group col-sm-12">
+                <label class="form-label hsrui-form-label col-sm-2 required">select</label>
+                <div class="form-controls hsrui-form-controls col-sm-10">
                     <select name="xxx" class="hsrui-editor hsrui-form-control" required>
                         <option value="">000</option>
                         <option value="111">111</option>
@@ -89,9 +101,11 @@
                     </select>
                 </div>
             </div>
-            <div class="form-group col-sm-6">
-                <label class="form-label hsrui-form-label col-sm-4">color</label>
-                <div class="form-controls hsrui-form-controls col-sm-8">
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-12">
+                <label class="form-label hsrui-form-label col-sm-2">color</label>
+                <div class="form-controls hsrui-form-controls col-sm-10">
                     <div class="hsrui-editor hsrui-editor-color">
                         <span class="hsrui-editor-addon">
                             <div class="hsrui-indicater-color"></div>
@@ -105,20 +119,22 @@
             </div>
         </div>
         <div class="row">
-            <div class="form-group col-sm-6">
-                <label class="form-label hsrui-form-label col-sm-4 required">date</label>
-                <div class="form-controls hsrui-form-controls col-sm-8">
+            <div class="form-group col-sm-12">
+                <label class="form-label hsrui-form-label col-sm-2 required">date</label>
+                <div class="form-controls hsrui-form-controls col-sm-10">
                     <div id="date" class="hsrui-editor hsrui-editor-date" data-format="yyyy-MM-dd HH:mm:ss" >
                         <input type="hidden" class="hsrui-editor-value" name="date" value="" required/>
                         <input type="text"
-                               class="hsrui-form-control hsrui-editor-display Wdate"
+                               class="Wdate hsrui-form-control hsrui-editor-display"
                                value="" />
                     </div>
                 </div>
             </div>
-            <div class="form-group col-sm-6">
-                <label class="form-label hsrui-form-label col-sm-4 required">datetime</label>
-                <div class="form-controls hsrui-form-controls col-sm-8">
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-12">
+                <label class="form-label hsrui-form-label col-sm-2 required">datetime</label>
+                <div class="form-controls hsrui-form-controls col-sm-10">
                     <div id="datetime" class="hsrui-editor hsrui-editor-date datetime" data-format="yyyy-MM-dd HH:mm:ss" >
                         <input type="hidden" class="hsrui-editor-value" name="datetime" value="" required/>
                         <input type="text"
@@ -129,9 +145,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="form-group col-sm-6">
-                <label class="form-label hsrui-form-label col-sm-4 required">time</label>
-                <div class="form-controls hsrui-form-controls col-sm-8">
+            <div class="form-group col-sm-12">
+                <label class="form-label hsrui-form-label col-sm-2 required">time</label>
+                <div class="form-controls hsrui-form-controls col-sm-10">
                     <div id="time" class="hsrui-editor hsrui-editor-date time" data-format="">
                         <input type="hidden" class="hsrui-editor-value" name="time" value="" required/>
                         <input type="text"
@@ -142,9 +158,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="form-group col-sm-6">
-                <label class="form-label hsrui-form-label col-sm-4 required">popup</label>
-                <div class="form-controls hsrui-form-controls col-sm-8">
+            <div class="form-group col-sm-12">
+                <label class="form-label hsrui-form-label col-sm-2 required">popup</label>
+                <div class="form-controls hsrui-form-controls col-sm-10">
                     <div class="hsrui-editor hsrui-editor-popup" data-beforOpen=""
                          data-url="/dist/html/selector.html" data-field-value="id" data-field-display="name"
                          data-select-mode="0" data-split-char=",">
@@ -157,9 +173,11 @@
                     </div>
                 </div>
             </div>
-            <div class="form-group col-sm-6">
-                <label class="form-label hsrui-form-label col-sm-4 required">lookup</label>
-                <div class="form-controls hsrui-form-controls col-sm-8">
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-12">
+                <label class="form-label hsrui-form-label col-sm-2 required">lookup</label>
+                <div class="form-controls hsrui-form-controls col-sm-10">
                     <div class="hsrui-editor hsrui-editor-image-uploader">
                         <div class="hsrui-editor hsrui-editor-lookup"
                              data-url="/dist/html/lookup.json" data-field-value="id" data-field-display="name" >
@@ -175,25 +193,27 @@
             </div>
         </div>
         <div class="row">
-            <div class="form-group">
-                <label class="form-label hsrui-form-label col-sm-2 required">备注:</label>
+            <div class="form-group col-sm-12">
+                <label class="form-label hsrui-form-label col-sm-2 required">备注</label>
                 <div class="form-controls hsrui-form-controls col-sm-10">
                     <textarea name="memo" rows="4" class="hsrui-editor hsrui-form-control" required="true" maxlength="500" placeholder="备注"></textarea>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="form-group col-sm-6">
-                <label class="form-label hsrui-form-label col-sm-4 required">complate</label>
-                <div class="form-controls hsrui-form-controls col-sm-8">
+            <div class="form-group col-sm-12">
+                <label class="form-label hsrui-form-label col-sm-2 required">complate</label>
+                <div class="form-controls hsrui-form-controls col-sm-10">
                     <div class="hsrui-editor hsrui-editor-autocomplate" data-kind="0" data-url="/dist/html/autocomplate.json" data-field-key="key" data-field-display="value">
                         <input type="text" class="hsrui-form-control hsrui-editor-display" name="complate" value="" required/>
                     </div>
                 </div>
             </div>
-            <div class="form-group col-sm-6">
-                <label class="form-label hsrui-form-label col-sm-4 required">combo</label>
-                <div class="form-controls hsrui-form-controls col-sm-8">
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-12">
+                <label class="form-label hsrui-form-label col-sm-2 required">combo</label>
+                <div class="form-controls hsrui-form-controls col-sm-10">
                     <div class="hsrui-editor hsrui-editor-combo">
                         <span class="hsrui-editor-input">
                             <span class="hsrui-editor-addon hsrui-editor-addon-right">
@@ -214,18 +234,18 @@
             </div>
         </div>
         <div class="row">
-            <div class="form-group col-sm-6">
-                <label class="form-label hsrui-form-label col-sm-4 required">treelookup</label>
-                <div class="form-controls hsrui-form-controls col-sm-8">
+            <div class="form-group col-sm-12">
+                <label class="form-label hsrui-form-label col-sm-2 required">treelookup</label>
+                <div class="form-controls hsrui-form-controls col-sm-10">
                     <div class="hsrui-editor hsrui-editor-image-uploader">
                         <div class="hsrui-editor hsrui-editor-lookup-tree"
                              data-url="/dist/html/treelookup.json" data-field-parent="pId" data-field-value="id" data-field-display="name">
                             <input type="hidden" class="hsrui-editor-value" name="treelookup" value="" required/>
                             <input type="text" class="hsrui-form-control hsrui-editor-display" value="" readonly />
-                            <span class="hsrui-editor-addon right">
-                                <a href="#" class="hsrui-editor-button clear"><i class="fa fa-close"></i></a>
-                                <a href="#" class="hsrui-editor-button arrow"><i class="fa fa-chevron-down"></i></a>
-                            </span>
+                                <span class="hsrui-editor-addon right">
+                                    <a href="#" class="hsrui-editor-button clear"><i class="fa fa-close"></i></a>
+                                    <a href="#" class="hsrui-editor-button arrow"><i class="fa fa-chevron-down"></i></a>
+                                </span>
                         </div>
                     </div>
                 </div>

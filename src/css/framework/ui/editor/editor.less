@@ -7,6 +7,7 @@
 .@{ui-prefix}editor {
     display: inline-block;
     position: relative;
+    width:100%;
 }
 
 // 附属。
@@ -79,7 +80,7 @@
 
 //== 日期/时间框。
 .@{ui-prefix}editor-date {
-    
+
     .@{ui-prefix}editor-display {
         padding-right: @form-editor-addon-item-width + @form-control-padding-right;
     }
@@ -87,14 +88,15 @@
     &.datetime {
         .@{ui-prefix}editor-display {
             padding-right: 20px;
-            width: 12em;
+            //width: 12em;
         }
     }
 }
 
 .Wdate {
     height: auto !important;
-    border: @border-grey !important;
+    border: @border-grey;
+    //!important;
 }
 
 //== 颜色框。

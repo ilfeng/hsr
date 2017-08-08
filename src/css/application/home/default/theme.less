@@ -8,18 +8,17 @@
 body {
     font: normal 12px 微软雅黑,宋体;
     color:#676767;
-    background-color:#ebebeb;
+    //background-color:#ebebeb;
+    overflow: hidden;
 }
 
 .@{ui-prefix}loading-mask {
     background: #ffffff;
     opacity: .90;
 }
-
-.@{ui-prefix}page {
-    background: #ebebeb;
+.@{ui-prefix}page{
+    background: #ffffff;
 }
-
 .@{ui-prefix}page-body {
     width: 100%;
 }
@@ -40,10 +39,10 @@ body {
 //否掉第三方默认样式
 .@{ui-prefix}navbar-brand{
     float:@float-l;
-    width: 220px;
+    width: 250px;
     height: @header-navbar-height;
     min-height: @header-navbar-height;
-    background: url("http://www.17sucai.com/preview/2/2017-04-23/coreui/img/logo.png") no-repeat center center;
+    background: url("/dist/img/logo.jpg") no-repeat center center;
     background-size:70% auto;
     display: inline-block;
     margin-right: 0;
@@ -60,15 +59,20 @@ body {
     }
 }
 .@{ui-prefix}dropdown{
+    min-width: 150px;
     .@{ui-prefix}img-avatar{
         width: 20px;
         height: 20px;
+        vertical-align: bottom;
         .rounded-corners(50%);
     }
     .@{ui-prefix}hidden-md-down{
         margin: 0 8px;
         position: relative;
         color: @color-gray;
+    }
+    a{
+        padding: 0px 15px;//不起作用
     }
 }
 a{
@@ -79,25 +83,104 @@ a{
         text-decoration: @none;
     }
 }
+.@{ui-prefix}navbar{
+    background-color: #f8f8f8;
+    border-bottom:1px solid #e7e7e7;
+    min-height: 50px;
+    .@{ui-prefix}navbar-container{
+        margin: 0 auto;
+    }
+    .active{
+        background-color: #ebebeb;
+    }
+}
 //主体容器
 .@{ui-prefix}home-mainbox{
-    position: relative;
-    padding-top:@header-navbar-height ;
+    position: absolute;
+    width: 100%;
+    height: calc(~"100% - @{header-navbar-height}");
     .@{ui-prefix}mainbox-sidebar{
         float:@float-l;
         width:@accordion-width;
-        height: calc(100vh - 55px);
+        height: calc(~"100% - @{header-navbar-height}");
         background: #263238 none repeat scroll 0 0;
         color: #fff;
         padding: 0;
         overflow-x: hidden;
         overflow-y: auto;
-        height: 100%;
         position: fixed;
+        @hover-color:rgba(0, 0, 0, 0.2);
+        .@{ui-prefix}nav-title{
+            padding: 1.5rem;
+            background-color: #304047;
+            i.icon-speedometer{
+                color: #20a8d8;
+                width: 20px;
+                margin-right:2rem;
+                font-size:1.4rem;
+                &:before{
+                    content:'\f0d9';
+                }
+            }
+        }
+        a{
+            font-size: 12px;
+            color: #fff;
+            display: block;
+            padding: 1.25rem 2rem 1.25rem 1.25rem;
+            text-decoration: none;
+            border-bottom: 1px dashed #304047;
+            &:hover{
+                color: #fff;
+                background: #20a8d8;
+            }
+            &:focus{outline:none;}
+            .@{ui-prefix}accordion-arrow{
+                float: right;
+                animation:all 0.5s;
+                &:before{
+                    content:'\f0d9';
+                }
+            }
+        }
+        li{
+            transition: all 0.2s linear;
+            &:last-child{
+                a{
+                    border-bottom: none;
+                }
+            }
+            ul{
+                padding-left:1rem;
+            }
+        }
+        .active{
+            background-color:@hover-color;
+            a{
+                border-bottom: 0px dashed #444;
+                &:hover{
+                    color: #fff;
+                    background: #20a8d8;
+                }
+            }
+
+        }
     }
     .@{ui-prefix}mainbox-canvas{
         margin-left: @accordion-width;
         height: 100%;
+        position: absolute;
+        //top: 50px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+
+        iframe{
+        width: 100%;
+        height: 100%;
+        border: none;
+        }
         .@{ui-prefix}breadcrumb{
             border-bottom: 1px solid #cfd8dc;
             margin-bottom: 1.5rem;
@@ -128,6 +211,72 @@ a{
             }
             .@{ui-prefix}active{
                 color: @color-gray;
+            }
+        }
+    }
+}
+
+.@{ui-prefix}dropdown-menu {
+    @height: 40px;
+    width: 150px;
+    line-height: @height;
+    background-color: #fff;
+    border: 1px solid #cfd8dc;
+    color: @color-dark-gray;
+    font-size: 1em;
+    right: 0;
+    margin-top: @height(70);
+    min-width: 10em;
+    padding: 0;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    z-index: 1000;
+    .@{ui-prefix}dropdown-header {
+        background-color: #eceff1;
+        font-weight: bold;
+        text-align: center;
+        color: #b0bec5;
+        display: block;
+        font-size: 1.2em;
+        padding: 20px 0;
+    }
+    li {
+        a {
+            width: 100%;
+            display: block;
+            color: @color-black;
+            background-color: @color-white;
+            border-bottom: 1px solid #cfd8dc;
+            padding: 0;
+            line-height: 35px;
+            &:hover {
+                background-color: #eceff1;
+                color: #1c2429;
+                text-decoration: none;
+            }
+            i {
+                color: #cfd8dc;
+                display: inline-block;
+                text-align: center;
+                width: 20px;
+                margin: 0 8px;
+            }
+            i:after {
+                width: 15px;
+                height: 15px;
+            }
+            .@{ui-prefix}ico-a:after {
+                content: "\e123";
+            }
+            .@{ui-prefix}ico-b:after {
+                content: "\e123";
+            }
+            .@{ui-prefix}ico-c:after {
+                content: "\e123";
+            }
+            .@{ui-prefix}ico-d:after {
+                content: "\e123";
             }
         }
     }

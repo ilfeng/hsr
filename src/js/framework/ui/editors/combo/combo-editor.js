@@ -98,7 +98,7 @@ define(['jquery', 'core', 'ui-editor', 'ui-tool-manager'], function ($, hsr, _su
             // onpropertychange: IE8 。
             self._display$.on('input propertychange', function() {
                 var textbox$ = $(this);
-                console.log(textbox$.val());
+                //console.log(textbox$.val());
             });
         },
         /**

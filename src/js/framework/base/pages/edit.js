@@ -64,6 +64,7 @@ define(['jquery', 'core', 'base-ns', 'base-page-base', 'jquery-validate-messages
             _superMethods._create.call(self, element$, options);
             
             // 表单处理。
+            self._loading$ = $('#loading-screen');
             self._form$ = element$.children('form');
             self._form$.validate({
                 submitHandler: function (form) {
@@ -123,8 +124,14 @@ define(['jquery', 'core', 'base-ns', 'base-page-base', 'jquery-validate-messages
             return true;
         },
         _save: function () {
+
             var self = this,
-                form$ = this._form$;
+                form$ = this._form$,
+                loading$ = self._loading$;
+            //加载中
+            if(loading$){
+                loading$.show();
+            }
 
             // 保存前检验。
             if (!self._validate()) {
@@ -151,14 +158,24 @@ define(['jquery', 'core', 'base-ns', 'base-page-base', 'jquery-validate-messages
                     }
 
                     // 返回数据处理。
-                    if (ro.status == 0) {
+                    if (ro.status == '000000') {
                         // 保存成功。
-                        hsr.app.info(ro.message);
+                        hsr.app.info(ro.msg);
                         // 关闭对话框。
                         self.close(hsr.ui.DialogResult.OK);
                     } else {
                         // 保存失败 -- 提示失败信息。
-                        hsr.app.warn(ro.message);
+                        hsr.app.warn(ro.msg);
+                    }
+
+                    if(loading$){
+                        loading$.hide();
+                    }
+                },
+                error: function(result){
+                    hsr.app.warn("未知错误");
+                    if(loading$){
+                        loading$.hide();
                     }
                 }
             }, self._createFormOptions());
