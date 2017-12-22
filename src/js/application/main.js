@@ -6,7 +6,7 @@
 
 /* 配置  */
 require.config({
-    baseUrl: '../',
+    baseUrl: '/hsr/',
 
     paths: {
         //** 插件 **

@@ -3,8 +3,8 @@
  */
 define(['ns'], function (ns) {
     /**
-     * 实现类的继承。
-     *
+     * 实现类的继承。 继承prototype 和 静态方法
+     *  prototype 链上的继承
      * @param childClass 子类。
      * @param superClass 父类。
      */
@@ -12,7 +12,7 @@ define(['ns'], function (ns) {
         // 不存在父类，直接退出。
         if (!superClass) return;
 
-        // 复制父类属性到子类中。
+        // 复制父类属性到子类中。 继承静态方法
         for (var prop in superClass) {
             if (superClass.hasOwnProperty(prop)) {
                 childClass[prop] = superClass[prop];

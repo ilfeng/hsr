@@ -43,9 +43,9 @@ function mergeArray(a, b) {
 }
 
 // 基本目录。
-var buildBaseUrl = '';
-var scriptBaseUrl = 'dist/js';
-var styleBaseUrl = 'dist/css';
+var buildBaseUrl = 'dist';
+// var scriptBaseUrl = 'dist/js';
+// var styleBaseUrl = 'dist/css';
 var scriptBaseSrcUrl = 'src/js';
 var styleBaseSrcUrl = 'src/css';
 
@@ -96,7 +96,7 @@ function build(dir, cfg, v, debug) {
         .pipe(concat(fileName))
         .pipe(gulpif(!debug, uglify()))
         .pipe(gulpif(!debug, rename({ suffix: '.min' })))
-        .pipe(gulp.dest(scriptBaseUrl));
+        .pipe(gulp.dest(buildBaseUrl+'/js'));
 }
 
 function buildThemeStyle(kind, theme, debug) {
@@ -108,7 +108,7 @@ function buildThemeStyle(kind, theme, debug) {
         //.replace('shell', 'home')
         //.replace('modules', '');
 
-    var dsc = styleBaseUrl+'/' + kind + 'themes/' + theme;
+    var dsc = buildBaseUrl + '/css' + '/' + kind + 'themes/' + theme;
 
     return gulp.src(src)
         .pipe(less())
@@ -126,7 +126,7 @@ function buildSkinStyle(kind, theme, skin, debug) {
         //.replace('shell', 'home')
         //.replace('modules', '');
 
-    var dsc = styleBaseUrl+'/' + kind + 'themes/' + theme + '/skins/' + skin;
+    var dsc = buildBaseUrl + '/css' + '/' + kind + 'themes/' + theme + '/skins/' + skin;
 
     return gulp.src(src)
         .pipe(less())
@@ -164,7 +164,7 @@ gulp.task('framework-style', function (debug) {
         .pipe(less())
         .pipe(gulpif(!debug, minifycss()))
         .pipe(gulpif(!debug, rename({ suffix: '.min' })))
-        .pipe(gulp.dest(styleBaseUrl));
+        .pipe(gulp.dest(buildBaseUrl + '/css'));
 });
 
 gulp.task('login-theme-default', function (debug) {
@@ -207,46 +207,52 @@ gulp.task('modules-style', [
 gulp.task('build-framework', ['extension', 'core', 'ui', 'base', 'framework-style'], function (debug) {
     var min = debug ? '' : '.min';
 
-    return gulp.src(scriptBaseUrl + '/@(extension|core|ui|base)' + min + '.js')
+    return gulp.src(buildBaseUrl + '/js' + '/@(extension|core|ui|base)' + min + '.js')
         .pipe(clean({ force: true }))
         .pipe(concat('framework' + min + '.js'))
-        .pipe(gulp.dest(scriptBaseUrl));
+        .pipe(gulp.dest(buildBaseUrl + '/js'));
 });
 
 //
 gulp.task('build-i', function() {
     return gulp.src('./src/i/**')
-        .pipe(gulp.dest('./dist/i/'));
+        .pipe(gulp.dest('./'+buildBaseUrl+'/i/'));
 });
 
 //
 gulp.task('build-img', function() {
     return gulp.src('./src/img/**')
-        .pipe(gulp.dest('./dist/img/'));
+        .pipe(gulp.dest('./'+buildBaseUrl+'/img/'));
 });
 
 //
 gulp.task('build-html', function() {
     return gulp.src('./src/html/**')
-        .pipe(gulp.dest('./dist/html/'));
+        .pipe(gulp.dest('./'+buildBaseUrl+'/html/'));
 });
 
 //js lib
 gulp.task('build-jslib', function() {
     return gulp.src('./src/js/lib/**')
-        .pipe(gulp.dest('./dist/js/lib/'));
+        .pipe(gulp.dest('./'+buildBaseUrl+'/js/lib/'));
 });
 
 //css lib
 gulp.task('build-csslib', function() {
     return gulp.src('./src/css/lib/**')
-        .pipe(gulp.dest('./dist/css/lib/'));
+        .pipe(gulp.dest('./'+buildBaseUrl+'/css/lib/'));
 });
 
 //widgets
 gulp.task('build-widgets', function() {
     return gulp.src('./src/widgets/**')
-        .pipe(gulp.dest('./dist/widgets/'));
+        .pipe(gulp.dest('./'+buildBaseUrl+'/widgets/'));
+});
+
+//复制全部文件到指定目录
+gulp.task('build-widgets', function() {
+    return gulp.src('./'+buildBaseUrl+'/**')
+        .pipe(gulp.dest('D:\\workspace\\ilfeng-cloud\\cloud-admin\\src\\main\\resources\\static\\hsr/'));
 });
 //静态文件处理
 gulp.task('build-static', ['build-jslib','build-csslib', 'build-widgets', 'build-i', 'build-img', 'build-html']);

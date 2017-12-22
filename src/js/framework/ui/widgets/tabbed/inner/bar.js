@@ -24,7 +24,7 @@ define(['jquery', 'core', 'ui-control', 'tabbed-label'], function ($, hsr, _supe
         self._labelOs = new hsr.Dictionary();
         self._labelActiveO = null;
 
-        // 继承父类。
+        // 继承父类。对象上的属性继承
         _super.call(self, element, options);
     }
 

@@ -16,7 +16,7 @@ define(['jquery', 'core', 'ui-panel', 'ui-tool-manager'], function ($, hsr, _sup
      * 
      * @constructor
      */
-    function TabbedClass(element, options) {
+    function TabbedMenuClass(element, options) {
         // 私有属性。
         var self = this;
 
@@ -28,7 +28,7 @@ define(['jquery', 'core', 'ui-panel', 'ui-tool-manager'], function ($, hsr, _sup
     }
 
     // 继承父类。
-    hsr.inherit(TabbedClass, _super);
+    hsr.inherit(TabbedMenuClass, _super);
 
     /***********元数据***********/
     var metedata = {
@@ -43,22 +43,22 @@ define(['jquery', 'core', 'ui-panel', 'ui-tool-manager'], function ($, hsr, _sup
          * @type {string}
          * @readonly
          */
-        cssClass: '@CSS_PREFIX@tabbed',
+        cssClass: '@CSS_PREFIX@tabbed-menu',
         /**
          * 名称。
          * @type {string}
          * @readonly
          */
-        typeName: 'Tabbed'
+        typeName: 'TabbedMenu'
     };
 
-    $.extend(TabbedClass, metedata);
+    $.extend(TabbedMenuClass, metedata);
 
     // 注册组件。
-    ToolUtils.regiest(TabbedClass);
+    ToolUtils.regiest(TabbedMenuClass);
 
     /***********公共(及特权)方法***********/
-    $.extend(TabbedClass.prototype, metedata, {
+    $.extend(TabbedMenuClass.prototype, metedata, {
         /**
          * 选中卡片。
          */
@@ -154,8 +154,8 @@ define(['jquery', 'core', 'ui-panel', 'ui-tool-manager'], function ($, hsr, _sup
 
             var barHeight = options.barIgnore ? 0 : self._bar$.outerHeight();
             var width = '100%', height = (element$.height() - barHeight) + 'px';
-            //self._content$.css({ width: width, height: height });
-            //self._tabPanel$s.css({ width: width, height: height });
+            self._content$.css({ width: width, height: height });
+            self._tabPanel$s.css({ width: width, height: height });
         },
         /**
          * 刷新子控件。

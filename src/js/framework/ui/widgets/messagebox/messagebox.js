@@ -79,7 +79,7 @@ define(['jquery', 'ui-ns', 'art-dialog', 'gritter'], function ($, ns) {
             $.gritter.add({
                 title: title || '提示',
                 text: msg || '',
-                image: '/dist/img/messagebox/info.png',
+                image: '/hsr/img/messagebox/info.png',
                 // 是否锁定。
                 sticky: opts.sticky,
                 // 自动消失时，停留的时间（单位：毫秒）。
@@ -103,7 +103,7 @@ define(['jquery', 'ui-ns', 'art-dialog', 'gritter'], function ($, ns) {
             $.gritter.add({
                 title: title || '警告',
                 text: msg || '',
-                image: '/dist/img/messagebox/warn.png',
+                image: '/hsr/img/messagebox/warn.png',
                 // 是否锁定。
                 sticky: opts.sticky,
                 // 自动消失时，停留的时间（单位：毫秒）。
@@ -127,7 +127,7 @@ define(['jquery', 'ui-ns', 'art-dialog', 'gritter'], function ($, ns) {
             $.gritter.add({
                 title: title || '错误',
                 text: msg || '',
-                image: '/dist/img/messagebox/error.png',
+                image: '/hsr/img/messagebox/error.png',
                 // 是否锁定。
                 sticky: opts.sticky,
                 // 自动消失时，停留的时间（单位：毫秒）。
